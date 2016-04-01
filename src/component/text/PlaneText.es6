@@ -69,7 +69,7 @@ export default class PlaneText extends Component {
         let material = new THREE.MeshBasicMaterial( {
             map        : texture,
             transparent: true,
-            depthWrite : false,
+            alphaTest  : 0.01,
             depthTest  : true,
             side       : THREE.DoubleSide
         } );

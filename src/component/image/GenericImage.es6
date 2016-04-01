@@ -65,8 +65,8 @@ export default class GenericImage extends Component {
         let material = new THREE.MeshBasicMaterial( {
             map        : texture,
             transparent: true,
-            depthWrite : false,
-            depthTest  : true,
+            alphaTest  : 0.01,
+            depthTest  : false,
             side       : THREE.DoubleSide
         } );
 
