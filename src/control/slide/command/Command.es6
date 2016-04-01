@@ -19,6 +19,7 @@ export default class Command {
         this._options = Object.assign( {}, DEFAULT_OPTIONS, params );
 
         // Define attributes.
+        this._id       = this._options.id;
         this._parent   = null;
         this._children = [];
         this._actions  = [];
@@ -43,6 +44,10 @@ export default class Command {
 
     backward( engine ) {
         this._actions.forEach( action => action.backward( engine ) );
+    }
+
+    get id() {
+        return this._id;
     }
 
     get parent() {

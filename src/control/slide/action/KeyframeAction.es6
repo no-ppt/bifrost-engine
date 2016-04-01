@@ -1,8 +1,28 @@
-import TWEEN    from 'tween';
-import Action   from './Action';
+import TWEEN            from 'tween';
+import Action           from './Action';
+import TweenConfig      from '../../../config/TweenConfig';
+import LoggerFactory    from '../../../core/logger/LoggerFactory';
 
+// Get logger.
+const logger = LoggerFactory.getLogger( 'KeyframeAction' );
+
+/**
+ * Default animation delay.
+ * @type {number}
+ */
+const DEFAULT_DELAY = 0;
+
+/**
+ * Default animation duration.
+ * @type {number}
+ */
 const DEFAULT_DURATION = 1000;
-const DEFAULT_EASING   = 'Sinusoidal.InOut';
+
+/**
+ * Default tween easing function.
+ * @type {string}
+ */
+const DEFAULT_EASING = 'Sinusoidal.InOut';
 
 /**
  *
@@ -11,21 +31,37 @@ const DEFAULT_EASING   = 'Sinusoidal.InOut';
  */
 export default class KeyframeAction extends Action {
 
+    /**
+     * Construct keyframe action.
+     *
+     * @param params Parameters for create the keyframe action.
+     */
     constructor( params ) {
         super( params );
 
         this._target   = params.target;
         this._from     = params.from || {};
         this._to       = params.to || {};
+        this._delay    = params.delay || DEFAULT_DELAY;
         this._duration = params.duration || DEFAULT_DURATION;
         this._easing   = params.easing || DEFAULT_EASING;
         this._createEasing();
     }
 
+    /**
+     * Execute keyframe forward.
+     *
+     * @param engine Rendering engine.
+     */
     forward( engine ) {
         this._animate( engine, this._to );
     }
 
+    /**
+     * Execute keyframe backward.
+     *
+     * @param engine Rendering engine.
+     */
     backward( engine ) {
         this._animate( engine, this._from );
     }
@@ -67,48 +103,82 @@ export default class KeyframeAction extends Action {
 
         // Check component.
         if ( !component ) {
-            // TODO> LOG.
+            logger.warn( `[_animate] No such component: [${ this._target }].` );
             return;
         }
 
-        // Define tween list.
-        let tweens = [];
+        if ( TweenConfig.enable ) {
 
-        if ( object.position ) {
-            tweens.push(
-                new TWEEN.Tween( component.position )
-                    .to( object.position, this._duration )
-                    .easing( object.easing )
-            );
-        }
-        if ( object.rotation ) {
-            let rotation = {
-                x: object.rotation.x != null ? object.rotation.x * Math.PI / 180
-                    : component.rotation.x,
-                y: object.rotation.y != null ? object.rotation.y * Math.PI / 180
-                    : component.rotation.y,
-                z: object.rotation.z != null ? object.rotation.z * Math.PI / 180
-                    : component.rotation.z
-            };
-            tweens.push(
-                new TWEEN.Tween( component.rotation )
-                    .to( rotation, this._duration )
-                    .easing( object.easing )
-            );
-        }
-        if ( object.opacity != null ) {
-            tweens.push(
-                new TWEEN.Tween( { opacity: component._opacity } )
-                    .to( { opacity: object.opacity }, this._duration )
-                    .onUpdate( function () {
-                        component.opacity = this.opacity;
-                    } )
-                    .easing( object.easing )
-            );
-        }
+            // Define tween list.
+            let tweens = [];
 
-        // Execute tween.
-        tweens.forEach( t => t.start() );
+            // Position tween.
+            if ( object.position ) {
+                tweens.push(
+                    new TWEEN.Tween( component.position )
+                        .to( object.position, this._duration )
+                        .easing( object.easing )
+                        .delay( this._delay )
+                );
+            }
+
+            // Rotation tween.
+            if ( object.rotation ) {
+                let rotation = {
+                    x: object.rotation.x != null ?
+                    object.rotation.x * Math.PI / 180 : component.rotation.x,
+                    y: object.rotation.y != null ?
+                    object.rotation.y * Math.PI / 180 : component.rotation.y,
+                    z: object.rotation.z != null ?
+                    object.rotation.z * Math.PI / 180 : component.rotation.z
+                };
+                tweens.push(
+                    new TWEEN.Tween( component.rotation )
+                        .to( rotation, this._duration )
+                        .easing( object.easing )
+                        .delay( this._delay )
+                );
+            }
+
+            // Opacity tween.
+            if ( object.opacity != null ) {
+                tweens.push(
+                    new TWEEN.Tween( { opacity: component._opacity } )
+                        .to( { opacity: object.opacity }, this._duration )
+                        .onUpdate( function () {
+                            component.opacity = this.opacity;
+                        } )
+                        .easing( object.easing )
+                        .delay( this._delay )
+                );
+            }
+
+            // Execute tween.
+            tweens.forEach( t => t.start() );
+        } else {
+
+            if ( object.position ) {
+                component.position.x = object.position.x != null ?
+                    object.position.x : component.position.x;
+                component.position.y = object.position.y != null ?
+                    object.position.y : component.position.y;
+                component.position.z = object.position.z != null ?
+                    object.position.z : component.position.z;
+            }
+
+            if ( object.rotation ) {
+                component.rotation.x = object.rotation.x != null ?
+                object.rotation.x * Math.PI / 180 : component.rotation.x;
+                component.rotation.y = object.rotation.y != null ?
+                object.rotation.y * Math.PI / 180 : component.rotation.y;
+                component.rotation.z = object.rotation.z != null ?
+                object.rotation.z * Math.PI / 180 : component.rotation.z;
+            }
+
+            if ( object.opacity != null ) {
+                component.opacity = object.opacity != null ? object.opacity : component.opacity;
+            }
+        }
     }
 
 }

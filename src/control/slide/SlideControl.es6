@@ -1,10 +1,7 @@
 import Controls         from '../Controls';
 import CommandFactory   from './command/CommandFactory';
-import ContentCommand   from './command/ContentCommand';
-import ElementCommand   from './command/ElementCommand';
 import HelperCommand    from './command/HelperCommand';
 import TopicCommand     from './command/TopicCommand';
-import ContextHelper    from '../../core/utils/ContextHelper';
 
 /**
  *
@@ -46,6 +43,7 @@ export default class SlideControl extends Controls {
         if ( index < this._index ) {
 
             let commands = this._commands.slice( index + 1, this._index + 1 );
+            commands.reverse();
             commands.forEach( function ( array ) {
 
                 // Topic commands || helper commands.
@@ -84,6 +82,26 @@ export default class SlideControl extends Controls {
         if ( this._index + 1 < this._commands.length ) {
             this.execCommand( this._index + 1 );
         }
+    }
+
+    getTopicCommandIndices() {
+        let indices = [];
+        this._commandTree.forEach( function ( command, index ) {
+            if ( command instanceof TopicCommand ) {
+                indices.push( index );
+            }
+        } );
+        return indices;
+    }
+
+    getHelperCommandIndices() {
+        let indices = [];
+        this._commandTree.forEach( function ( command, index ) {
+            if ( command instanceof HelperCommand ) {
+                indices.push( index );
+            }
+        } );
+        return indices;
     }
 
     _buildCommandTree( data ) {
