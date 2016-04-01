@@ -24,10 +24,11 @@
   "scripts": {
     "clean": "rm -rf .tmp && rm -rf dist",
     "watch": "babel src -w -d dist",
-    "compile": "babel --minified src -d dist",
+    "compile": "babel src -d dist",
     "combine": "node node_modules/requirejs/bin/r.js -o build/build.js",
+    "uglify": "uglifyjs dist/bifrost-engine.js -c -o dist/bifrost-engine.min.js --source-map dist/bifrost-engine.js.map",
     "prebuild": "npm run clean",
-    "build": "npm run compile && npm run combine"
+    "build": "npm run compile && npm run combine && npm run uglify"
   },
   "devDependencies": {
     "babel-cli": "^6.6.4",
