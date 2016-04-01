@@ -140,6 +140,9 @@ export default class Player extends EventTarget {
 
         if ( this._status === Status.PLAYING ) {
 
+            // Update player status.
+            this._status = Status.PAUSE;
+
             // Disable controls.
             this._controls.forEach( control => control.disable() );
 
