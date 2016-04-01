@@ -2,7 +2,6 @@ import THREE            from 'three';
 import Event            from '../core/events/Event';
 import EventTarget      from '../core/events/EventTarget';
 import LoggerFactory    from '../core/logger/LoggerFactory';
-import ContextHelper    from '../core/utils/ContextHelper';
 import ComponentFactory from '../component/ComponentFactory';
 import Component        from '../component/Component';
 
@@ -17,18 +16,22 @@ const logger = LoggerFactory.getLogger( 'RenderingEngine' );
  * @property {boolean}  alpha
  * @property {boolean}  premultipliedAlpha - Enable premultiplied alpha. Default is false.
  * @property {boolean}  stencil     - Enable stencil buffer. Default is false.
- * @property {boolean}  preserveDrawingBuffer - Preserve the drawing buffer. Default is true.
  * @property {boolean}  antialias   - Enable antialias. Default is true.
+ * @property {boolean}  preserveDrawingBuffer - Preserve the drawing buffer. Default is true.
+ * @property {boolean}  depth       - Enable depth buffer. Default is true.
+ * @property {boolean}  logarithmicDepthBuffer - Enable logarithmic depth buffer. Default is true.
  * @property {number}   clearColor  - Renderer clear color. Default is black.
  */
 const DEFAULT_RENDERER_OPTIONS = {
-    precision            : 'mediump',
-    alpha                : false,
-    premultipliedAlpha   : false,
-    stencil              : false,
-    preserveDrawingBuffer: false,
-    antialias            : true,
-    clearColor           : 0x000000
+    precision             : 'mediump',
+    alpha                 : false,
+    premultipliedAlpha    : false,
+    antialias             : true,
+    stencil               : false,
+    preserveDrawingBuffer : true,
+    depth                 : true,
+    logarithmicDepthBuffer: true,
+    clearColor            : 0x000000
 };
 
 /**
@@ -247,12 +250,14 @@ export default class RenderingEngine extends EventTarget {
         // Create renderer.
         if ( !this._renderer ) {
             this._renderer = new THREE.WebGLRenderer( {
-                precision            : options.precision,
-                alpha                : options.alpha,
-                premultipliedAlpha   : options.premultipliedAlpha,
-                stencil              : options.stencil,
-                preserveDrawingBuffer: options.preserveDrawingBuffer,
-                antialias            : options.antialias
+                precision             : options.precision,
+                alpha                 : options.alpha,
+                premultipliedAlpha    : options.premultipliedAlpha,
+                antialias             : options.antialias,
+                stencil               : options.stencil,
+                preserveDrawingBuffer : options.preserveDrawingBuffer,
+                depth                 : options.depth,
+                logarithmicDepthBuffer: options.logarithmicDepthBuffer
             } );
         }
         this._renderer.setClearColor( parseInt( options.clearColor ) );
