@@ -1,6 +1,5 @@
 import Asset            from './Asset';
 import AssetStatus      from './AssetStatus';
-import Event            from '../core/events/Event';
 import ContextHelper    from '../core/utils/ContextHelper';
 
 const DEFAULT_OPTIONS = {
@@ -27,8 +26,9 @@ export default class ImageAsset extends Asset {
     }
 
     load() {
-        this._image.src = this._src;
-        this.status     = AssetStatus.PROCESSING;
+        this._image.crossOrigin = 'anonymous';
+        this._image.src         = this._src;
+        this.status             = AssetStatus.PROCESSING;
     }
 
     _bindEvents() {
