@@ -284,9 +284,9 @@ export default class RenderingEngine extends EventTarget {
         this._camera.position.x = options.position.x || 0;
         this._camera.position.y = options.position.y || 0;
         this._camera.position.z = options.position.z || 0;
-        this._camera.rotation.x = options.rotation.x || 0;
-        this._camera.rotation.y = options.rotation.y || 0;
-        this._camera.rotation.z = options.rotation.z || 0;
+        this._camera.rotation.x = options.rotation.x * Math.PI / 180 || 0;
+        this._camera.rotation.y = options.rotation.y * Math.PI / 180 || 0;
+        this._camera.rotation.z = options.rotation.z * Math.PI / 180 || 0;
 
         // Dispatch events.
         this.dispatchEvent( new Event( {
