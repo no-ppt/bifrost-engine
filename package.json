@@ -1,6 +1,6 @@
 {
   "name": "bifrost-engine",
-  "version": "2.0.0",
+  "version": "2.0.3",
   "description": "Rendering enigne for No-PPT.",
   "main": "dist/bifrost-engine.js",
   "window": {
