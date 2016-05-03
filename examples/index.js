@@ -2,18 +2,24 @@
 requirejs.config( {
     baseUrl: '../dist',
     paths  : {
-        jquery : '../node_modules/jquery/dist/jquery',
-        Bifrost: './bifrost-engine.min'
+        jquery          : '../node_modules/jquery/dist/jquery',
+        bifrost         : './bifrost-engine.min',
+        'three'         : '../node_modules/three/three',
+        'tween'         : '../node_modules/tween.js/src/Tween',
+        'babel-polyfill': '../node_modules/babel-polyfill/dist/polyfill'
+    },
+    shim   : {
+        // 'bifrost': [ 'babel-polyfill' ]
     }
 } );
 
-require( [ 'jquery', 'Bifrost' ], function ( $, bifrost ) {
+require( [ 'jquery', 'bifrost' ], function ( $, bifrost ) {
 
     // ES 6 polyfill.
     var Bifrost = bifrost.default;
 
-    var Player      = Bifrost.player.Player;
-    var TweenConfig = Bifrost.config.TweenConfig;
+    var Player         = Bifrost.player.Player;
+    var TweenConfig    = Bifrost.config.TweenConfig;
     TweenConfig.enable = true;
 
     // Create player.
@@ -22,7 +28,11 @@ require( [ 'jquery', 'Bifrost' ], function ( $, bifrost ) {
     events();
 
     // Load data from json.
-    $.get( 'resources/output.json', function ( data ) {
+    var name = location.search.substr( 1 );
+    $.get( 'scene/' + name + '/output.json', function ( data ) {
+        data.assets.forEach( function ( asset ) {
+            asset.src = 'scene/' + name + '/data/' + asset.src.substr( 22 );
+        } );
         player.open( data );
     } );
 

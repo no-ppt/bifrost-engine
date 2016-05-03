@@ -1,8 +1,8 @@
 {
   "name": "bifrost-engine",
-  "version": "2.0.0",
+  "version": "2.0.3",
   "description": "Rendering enigne for No-PPT.",
-  "main": "dist/Bifrost.js",
+  "main": "dist/bifrost-engine.js",
   "window": {
     "toolbar": true,
     "width": 1200,
@@ -22,13 +22,14 @@
   "license": "UNLICENSED",
   "private": true,
   "scripts": {
-    "clean": "rm -rf .tmp && rm -rf dist",
-    "watch": "babel src -w -d dist",
-    "compile": "babel src -d dist",
-    "combine": "node node_modules/requirejs/bin/r.js -o build/build.js",
+    "clean": "rm -rf .tmp",
+    "watch": "babel src -w -d .tmp",
+    "compile": "babel src -d .tmp",
+    "combine": "webpack",
     "uglify": "uglifyjs dist/bifrost-engine.js -c -o dist/bifrost-engine.min.js --source-map dist/bifrost-engine.js.map",
     "prebuild": "npm run clean",
-    "build": "npm run compile && npm run combine && npm run uglify"
+    "build": "npm run compile && npm run combine && npm run uglify",
+    "postbuild": "npm run clean"
   },
   "devDependencies": {
     "babel-cli": "^6.6.4",

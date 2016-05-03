@@ -1,16 +1,13 @@
 {
-  "name": "多边平台模式",
+  "name": "彩虹",
   "tags": [
-    "融资路演",
-    "创业路演",
-    "多边平台",
-    "商业模式"
+    "彩虹"
   ],
   "price": 0,
   "sale": 0,
-  "description": "本场景属融资路演系列，适用于多边平台商业模式的创业项目。调性卡通、活泼、灵活。",
+  "description": "彩虹",
   "cover": "cover.jpg",
-  "clearColor": 8241350,
+  "clearColor": 16777215,
   "camera": {
     "type": "PerspectiveCamera",
     "fov": 45,
@@ -18,9 +15,9 @@
     "near": 1,
     "far": 1000000,
     "position": {
-      "x": 0,
+      "x": -4900,
       "y": 0,
-      "z": 50000
+      "z": 2000
     },
     "rotation": {
       "x": 0,
@@ -30,66 +27,41 @@
   },
   "assets": [
     {
-      "id": "7fa915644f7e0789cfb501bda2ddd43b",
+      "id": "9fa528e6e389a641deccb5341212d248",
       "type": "ImageAsset",
-      "src": "resources/we2.png"
+      "src": "scene/resources/image/bg.jpg"
     },
     {
-      "id": "bac6641b13f8e69b038b28a042a91dc1",
+      "id": "860ea44a3f5683a876ef2f04af0caa16",
       "type": "ImageAsset",
-      "src": "resources/qq.png"
+      "src": "scene/resources/image/7.png"
     },
     {
-      "id": "47ece129ca0268e6ae266162f8a8e2e9",
+      "id": "881c60287ffa2b29791c083dc2dd5d43",
       "type": "ImageAsset",
-      "src": "resources/xc.png"
-    },
-    {
-      "id": "bd49d309f07168fcc01725197529b2e9",
-      "type": "ImageAsset",
-      "src": "resources/qc.png"
-    },
-    {
-      "id": "1b0d1473fa23367a8d0028b10b0cbc68",
-      "type": "ImageAsset",
-      "src": "resources/gc.png"
-    },
-    {
-      "id": "81ce15f09a4de779d67f33d963d5ede6",
-      "type": "ImageAsset",
-      "src": "resources/xq.png"
-    },
-    {
-      "id": "cc3c74b28c04cac7b1316b393ce4228d",
-      "type": "ImageAsset",
-      "src": "resources/qt.png"
-    },
-    {
-      "id": "bf0fc2d5020004d3d532da3651f4d960",
-      "type": "ImageAsset",
-      "src": "resources/gy.png"
-    },
-    {
-      "id": "585e0046e17d1b725cbf952b168f6483",
-      "type": "ImageAsset",
-      "src": "resources/we.png"
+      "src": "scene/resources/image/6-2.png"
     },
     {
       "id": "9fa528e6e389a641deccb5341212d248",
       "type": "ImageAsset",
-      "src": "resources/bg.jpg"
+      "src": "scene/resources/image/bg.jpg"
+    },
+    {
+      "id": "0381d07b939d68a83261b902e816c61d",
+      "type": "ImageAsset",
+      "src": "scene/resources/image/6.png"
     }
   ],
   "scene": {
     "children": [
       {
-        "id": "we2",
-        "width": 98,
-        "height": 70,
+        "id": "bai",
+        "width": 19200,
+        "height": 10800,
         "position": {
-          "x": 150,
-          "y": 450,
-          "z": 150
+          "x": -4000,
+          "y": 0,
+          "z": 10
         },
         "rotation": {
           "x": 0,
@@ -103,16 +75,16 @@
         },
         "opacity": 0,
         "class": "GenericImage",
-        "src": "ref:7fa915644f7e0789cfb501bda2ddd43b"
+        "src": "ref:9fa528e6e389a641deccb5341212d248"
       },
       {
-        "id": "qq",
-        "width": 920,
-        "height": 1440,
+        "id": "7",
+        "width": 1920,
+        "height": 1080,
         "position": {
-          "x": 6500,
-          "y": -800,
-          "z": 2500
+          "x": -3000,
+          "y": 0,
+          "z": 0
         },
         "rotation": {
           "x": 0,
@@ -126,16 +98,16 @@
         },
         "opacity": 0,
         "class": "GenericImage",
-        "src": "ref:bac6641b13f8e69b038b28a042a91dc1"
+        "src": "ref:860ea44a3f5683a876ef2f04af0caa16"
       },
       {
-        "id": "xc",
-        "width": 4570,
-        "height": 3900,
+        "id": "6-2",
+        "width": 1920,
+        "height": 1080,
         "position": {
-          "x": 1500,
-          "y": 3100,
-          "z": 70
+          "x": -5000,
+          "y": 0,
+          "z": -1
         },
         "rotation": {
           "x": 0,
@@ -149,152 +121,37 @@
         },
         "opacity": 0,
         "class": "GenericImage",
-        "src": "ref:47ece129ca0268e6ae266162f8a8e2e9"
-      },
-      {
-        "id": "qc",
-        "width": 6340,
-        "height": 5360,
-        "position": {
-          "x": -5100,
-          "y": -900,
-          "z": 1700
-        },
-        "rotation": {
-          "x": 0,
-          "y": 0,
-          "z": 0
-        },
-        "scale": {
-          "x": 1,
-          "y": 1,
-          "z": 1
-        },
-        "opacity": 0,
-        "class": "GenericImage",
-        "src": "ref:bd49d309f07168fcc01725197529b2e9"
-      },
-      {
-        "id": "gc",
-        "width": 6310,
-        "height": 5100,
-        "position": {
-          "x": 4200,
-          "y": -1800,
-          "z": 2200
-        },
-        "rotation": {
-          "x": 0,
-          "y": 0,
-          "z": 0
-        },
-        "scale": {
-          "x": 1,
-          "y": 1,
-          "z": 1
-        },
-        "opacity": 0,
-        "class": "GenericImage",
-        "src": "ref:1b0d1473fa23367a8d0028b10b0cbc68"
-      },
-      {
-        "id": "xq",
-        "width": 3830,
-        "height": 3890,
-        "position": {
-          "x": 1500,
-          "y": 2700,
-          "z": 50
-        },
-        "rotation": {
-          "x": 0,
-          "y": 0,
-          "z": 0
-        },
-        "scale": {
-          "x": 1,
-          "y": 1,
-          "z": 1
-        },
-        "opacity": 0,
-        "class": "GenericImage",
-        "src": "ref:81ce15f09a4de779d67f33d963d5ede6"
-      },
-      {
-        "id": "qt",
-        "width": 5000,
-        "height": 4410,
-        "position": {
-          "x": -5100,
-          "y": -1300,
-          "z": 1500
-        },
-        "rotation": {
-          "x": 0,
-          "y": 0,
-          "z": 0
-        },
-        "scale": {
-          "x": 1,
-          "y": 1,
-          "z": 1
-        },
-        "opacity": 0,
-        "class": "GenericImage",
-        "src": "ref:cc3c74b28c04cac7b1316b393ce4228d"
-      },
-      {
-        "id": "gy",
-        "width": 5180,
-        "height": 5270,
-        "position": {
-          "x": 4200,
-          "y": -1700,
-          "z": 2000
-        },
-        "rotation": {
-          "x": 0,
-          "y": 0,
-          "z": 0
-        },
-        "scale": {
-          "x": 1,
-          "y": 1,
-          "z": 1
-        },
-        "opacity": 0,
-        "class": "GenericImage",
-        "src": "ref:bf0fc2d5020004d3d532da3651f4d960"
-      },
-      {
-        "id": "we",
-        "width": 3000,
-        "height": 3000,
-        "position": {
-          "x": 0,
-          "y": 0,
-          "z": 100
-        },
-        "rotation": {
-          "x": 0,
-          "y": 0,
-          "z": 0
-        },
-        "scale": {
-          "x": 1,
-          "y": 1,
-          "z": 1
-        },
-        "opacity": 0,
-        "class": "GenericImage",
-        "src": "ref:585e0046e17d1b725cbf952b168f6483"
+        "src": "ref:881c60287ffa2b29791c083dc2dd5d43"
       },
       {
         "id": "bg",
-        "width": 38400,
-        "height": 21600,
+        "width": 40000,
+        "height": 40000,
         "position": {
           "x": 0,
+          "y": 0,
+          "z": -50
+        },
+        "rotation": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "scale": {
+          "x": 1,
+          "y": 1,
+          "z": 1
+        },
+        "opacity": 1,
+        "class": "GenericImage",
+        "src": "ref:9fa528e6e389a641deccb5341212d248"
+      },
+      {
+        "id": "6-1",
+        "width": 1920,
+        "height": 1080,
+        "position": {
+          "x": -5000,
           "y": 0,
           "z": 0
         },
@@ -310,19 +167,19 @@
         },
         "opacity": 1,
         "class": "GenericImage",
-        "src": "ref:9fa528e6e389a641deccb5341212d248"
+        "src": "ref:0381d07b939d68a83261b902e816c61d"
       }
     ]
   },
   "topics": [
     {
       "id": "t1",
-      "width": 18980,
-      "height": 10676.25,
+      "width": 176,
+      "height": 99,
       "position": {
-        "x": 0,
+        "x": -5000,
         "y": 0,
-        "z": 50
+        "z": 1
       },
       "rotation": {
         "x": 0,
@@ -334,21 +191,29 @@
         "y": 1,
         "z": 1
       },
-      "opacity": 0
+      "opacity": 1
     },
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
     {
-      "id": "t2",
-      "width": 294.32,
-      "height": 165.5,
+      "id": "t10",
+      "width": 220,
+      "height": 124,
       "position": {
-        "x": 1480,
-        "y": 3250,
-        "z": 100
+        "x": -3130,
+        "y": -286,
+        "z": 1
       },
       "rotation": {
         "x": 0,
         "y": 0,
-        "z": 0
+        "z": 154
       },
       "scale": {
         "x": 1,
@@ -358,18 +223,18 @@
       "opacity": 0
     },
     {
-      "id": "t3",
-      "width": 8.84,
-      "height": 4.97,
+      "id": "t11",
+      "width": 220,
+      "height": 124,
       "position": {
-        "x": 3299,
-        "y": -1950,
-        "z": 2010
+        "x": -2712,
+        "y": -78,
+        "z": 1
       },
       "rotation": {
         "x": 0,
         "y": 0,
-        "z": 0
+        "z": 254
       },
       "scale": {
         "x": 1,
@@ -379,18 +244,18 @@
       "opacity": 0
     },
     {
-      "id": "t4",
-      "width": 7.37,
-      "height": 4.14,
+      "id": "t12",
+      "width": 213,
+      "height": 120,
       "position": {
-        "x": 5560,
-        "y": -1940,
-        "z": 2005
+        "x": -3227,
+        "y": 172,
+        "z": 1
       },
       "rotation": {
         "x": 0,
         "y": 0,
-        "z": 0
+        "z": 409
       },
       "scale": {
         "x": 1,
@@ -400,81 +265,18 @@
       "opacity": 0
     },
     {
-      "id": "t5",
-      "width": 29.48,
-      "height": 16.58,
+      "id": "t13",
+      "width": 213,
+      "height": 120,
       "position": {
-        "x": -5200,
-        "y": -1410,
-        "z": 1510
-      },
-      "rotation": {
-        "x": 0,
-        "y": 0,
-        "z": 0
-      },
-      "scale": {
-        "x": 1,
-        "y": 1,
+        "x": -3286,
+        "y": -74,
         "z": 1
       },
-      "opacity": 0
-    },
-    {
-      "id": "t6",
-      "width": 1.47,
-      "height": 0.83,
-      "position": {
-        "x": 145,
-        "y": 431,
-        "z": 151
-      },
       "rotation": {
         "x": 0,
         "y": 0,
-        "z": 0
-      },
-      "scale": {
-        "x": 1,
-        "y": 1,
-        "z": 1
-      },
-      "opacity": 0
-    },
-    {
-      "id": "t7",
-      "width": 88.4,
-      "height": 49.72,
-      "position": {
-        "x": 0,
-        "y": -750,
-        "z": 120
-      },
-      "rotation": {
-        "x": 0,
-        "y": 0,
-        "z": 0
-      },
-      "scale": {
-        "x": 1,
-        "y": 1,
-        "z": 1
-      },
-      "opacity": 0
-    },
-    {
-      "id": "t8",
-      "width": 14.73,
-      "height": 8.29,
-      "position": {
-        "x": 6590,
-        "y": -1150,
-        "z": 2510
-      },
-      "rotation": {
-        "x": 0,
-        "y": 0,
-        "z": 0
+        "z": 459
       },
       "scale": {
         "x": 1,
@@ -491,7 +293,7 @@
       "class": "SlideControl",
       "commands": [
         {
-          "id": "to1",
+          "id": "fengmian",
           "class": "TopicCommand",
           "actions": [
             {
@@ -500,9 +302,9 @@
               "from": {},
               "to": {
                 "position": {
-                  "x": 0,
+                  "x": -5000,
                   "y": 0,
-                  "z": 12930
+                  "z": 120
                 },
                 "rotation": {
                   "x": 0,
@@ -517,117 +319,9 @@
               "from": {},
               "to": {
                 "position": {
-                  "x": 0,
+                  "x": -5000,
                   "y": 0,
-                  "z": 50
-                },
-                "rotation": {
-                  "x": 0,
-                  "y": 0,
-                  "z": 0
-                },
-                "opacity": 1
-              }
-            },
-            {
-              "class": "KeyframeAction",
-              "target": "xc",
-              "from": {},
-              "to": {
-                "position": {
-                  "x": 1500,
-                  "y": 2800,
-                  "z": 70
-                },
-                "rotation": {
-                  "x": 0,
-                  "y": 0,
-                  "z": 0
-                },
-                "opacity": 0
-              }
-            },
-            {
-              "class": "KeyframeAction",
-              "target": "gc",
-              "from": {},
-              "to": {
-                "position": {
-                  "x": 4200,
-                  "y": -1500,
-                  "z": 2200
-                },
-                "rotation": {
-                  "x": 0,
-                  "y": 0,
-                  "z": 0
-                },
-                "opacity": 0
-              }
-            },
-            {
-              "class": "KeyframeAction",
-              "target": "qc",
-              "from": {},
-              "to": {
-                "position": {
-                  "x": -5100,
-                  "y": -300,
-                  "z": 1700
-                },
-                "rotation": {
-                  "x": 0,
-                  "y": 0,
-                  "z": 0
-                },
-                "opacity": 0
-              }
-            },
-            {
-              "class": "KeyframeAction",
-              "target": "gy",
-              "from": {},
-              "to": {
-                "position": {
-                  "x": 14200,
-                  "y": -11700,
-                  "z": 2000
-                },
-                "rotation": {
-                  "x": 0,
-                  "y": 0,
-                  "z": 0
-                },
-                "opacity": 1
-              }
-            },
-            {
-              "class": "KeyframeAction",
-              "target": "qt",
-              "from": {},
-              "to": {
-                "position": {
-                  "x": -15100,
-                  "y": -11300,
-                  "z": 1500
-                },
-                "rotation": {
-                  "x": 0,
-                  "y": 0,
-                  "z": 0
-                },
-                "opacity": 1
-              }
-            },
-            {
-              "class": "KeyframeAction",
-              "target": "xq",
-              "from": {},
-              "to": {
-                "position": {
-                  "x": 1500,
-                  "y": 12700,
-                  "z": 50
+                  "z": 1
                 },
                 "rotation": {
                   "x": 0,
@@ -640,7 +334,7 @@
           ]
         },
         {
-          "id": "k1",
+          "id": "view1",
           "class": "HelperCommand",
           "actions": [
             {
@@ -648,9 +342,9 @@
               "target": "camera",
               "from": {
                 "position": {
-                  "x": 0,
+                  "x": -5000,
                   "y": 0,
-                  "z": 12930
+                  "z": 120
                 },
                 "rotation": {
                   "x": 0,
@@ -660,15 +354,33 @@
               },
               "to": {
                 "position": {
-                  "x": 0,
+                  "x": -5000,
                   "y": 0,
-                  "z": 12930
+                  "z": 1600
                 },
                 "rotation": {
                   "x": 0,
                   "y": 0,
                   "z": 0
                 }
+              }
+            },
+            {
+              "class": "KeyframeAction",
+              "target": " t2",
+              "from": {},
+              "to": {
+                "position": {
+                  "x": -5000,
+                  "y": 250,
+                  "z": 1
+                },
+                "rotation": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                },
+                "opacity": 0
               }
             },
             {
@@ -676,9 +388,9 @@
               "target": "t1",
               "from": {
                 "position": {
-                  "x": 0,
+                  "x": -5000,
                   "y": 0,
-                  "z": 50
+                  "z": 1
                 },
                 "rotation": {
                   "x": 0,
@@ -689,9 +401,9 @@
               },
               "to": {
                 "position": {
-                  "x": 0,
+                  "x": -5000,
                   "y": 0,
-                  "z": 50
+                  "z": 1
                 },
                 "rotation": {
                   "x": 0,
@@ -703,12 +415,13 @@
             },
             {
               "class": "KeyframeAction",
-              "target": "gc",
-              "from": {
+              "target": "6-2",
+              "from": {},
+              "to": {
                 "position": {
-                  "x": 4200,
-                  "y": -1500,
-                  "z": 2200
+                  "x": -5000,
+                  "y": 0,
+                  "z": -1
                 },
                 "rotation": {
                   "x": 0,
@@ -716,175 +429,12 @@
                   "z": 0
                 },
                 "opacity": 0
-              },
-              "to": {
-                "position": {
-                  "x": 4200,
-                  "y": -1800,
-                  "z": 2200
-                },
-                "rotation": {
-                  "x": 0,
-                  "y": 0,
-                  "z": 0
-                },
-                "opacity": 1
-              }
-            },
-            {
-              "class": "KeyframeAction",
-              "target": "xc",
-              "from": {
-                "position": {
-                  "x": 1500,
-                  "y": 2800,
-                  "z": 70
-                },
-                "rotation": {
-                  "x": 0,
-                  "y": 0,
-                  "z": 0
-                },
-                "opacity": 0
-              },
-              "to": {
-                "position": {
-                  "x": 1500,
-                  "y": 3100,
-                  "z": 70
-                },
-                "rotation": {
-                  "x": 0,
-                  "y": 0,
-                  "z": 0
-                },
-                "opacity": 1
-              }
-            },
-            {
-              "class": "KeyframeAction",
-              "target": "qc",
-              "from": {
-                "position": {
-                  "x": -5100,
-                  "y": -300,
-                  "z": 1700
-                },
-                "rotation": {
-                  "x": 0,
-                  "y": 0,
-                  "z": 0
-                },
-                "opacity": 0
-              },
-              "to": {
-                "position": {
-                  "x": -5100,
-                  "y": -900,
-                  "z": 1700
-                },
-                "rotation": {
-                  "x": 0,
-                  "y": 0,
-                  "z": 0
-                },
-                "opacity": 1
-              }
-            },
-            {
-              "class": "KeyframeAction",
-              "target": "xq",
-              "from": {
-                "position": {
-                  "x": 1500,
-                  "y": 12700,
-                  "z": 50
-                },
-                "rotation": {
-                  "x": 0,
-                  "y": 0,
-                  "z": 0
-                },
-                "opacity": 1
-              },
-              "to": {
-                "position": {
-                  "x": 1500,
-                  "y": 2700,
-                  "z": 50
-                },
-                "rotation": {
-                  "x": 0,
-                  "y": 0,
-                  "z": 0
-                },
-                "opacity": 1
-              }
-            },
-            {
-              "class": "KeyframeAction",
-              "target": "qt",
-              "from": {
-                "position": {
-                  "x": -15100,
-                  "y": -11300,
-                  "z": 1500
-                },
-                "rotation": {
-                  "x": 0,
-                  "y": 0,
-                  "z": 0
-                },
-                "opacity": 1
-              },
-              "to": {
-                "position": {
-                  "x": -5100,
-                  "y": -1300,
-                  "z": 1500
-                },
-                "rotation": {
-                  "x": 0,
-                  "y": 0,
-                  "z": 0
-                },
-                "opacity": 1
-              }
-            },
-            {
-              "class": "KeyframeAction",
-              "target": "gy",
-              "from": {
-                "position": {
-                  "x": 14200,
-                  "y": -11700,
-                  "z": 2000
-                },
-                "rotation": {
-                  "x": 0,
-                  "y": 0,
-                  "z": 0
-                },
-                "opacity": 1
-              },
-              "to": {
-                "position": {
-                  "x": 4200,
-                  "y": -1700,
-                  "z": 2000
-                },
-                "rotation": {
-                  "x": 0,
-                  "y": 0,
-                  "z": 0
-                },
-                "opacity": 1
               }
             }
           ]
         },
         {
-          "id": "k2",
+          "id": "zuo1",
           "class": "TopicCommand",
           "actions": [
             {
@@ -892,573 +442,9 @@
               "target": "camera",
               "from": {
                 "position": {
-                  "x": 0,
+                  "x": -5000,
                   "y": 0,
-                  "z": 12930
-                },
-                "rotation": {
-                  "x": 0,
-                  "y": 0,
-                  "z": 0
-                }
-              },
-              "to": {
-                "position": {
-                  "x": 1600,
-                  "y": 2910,
-                  "z": 5520
-                },
-                "rotation": {
-                  "x": 0,
-                  "y": 0,
-                  "z": 0
-                }
-              }
-            },
-            {
-              "class": "KeyframeAction",
-              "target": "t2",
-              "from": {},
-              "to": {
-                "position": {
-                  "x": 1480,
-                  "y": 3250,
-                  "z": 100
-                },
-                "rotation": {
-                  "x": 0,
-                  "y": 0,
-                  "z": 0
-                },
-                "opacity": 0
-              }
-            },
-            {
-              "class": "KeyframeAction",
-              "target": "xc",
-              "from": {
-                "position": {
-                  "x": 1500,
-                  "y": 3100,
-                  "z": 70
-                },
-                "rotation": {
-                  "x": 0,
-                  "y": 0,
-                  "z": 0
-                },
-                "opacity": 1
-              },
-              "to": {
-                "position": {
-                  "x": 900,
-                  "y": 2400,
-                  "z": 70
-                },
-                "rotation": {
-                  "x": 0,
-                  "y": 0,
-                  "z": 0
-                },
-                "opacity": 1
-              }
-            }
-          ]
-        },
-        {
-          "id": "to2",
-          "class": "HelperCommand",
-          "actions": [
-            {
-              "class": "KeyframeAction",
-              "target": "camera",
-              "from": {
-                "position": {
-                  "x": 1600,
-                  "y": 2910,
-                  "z": 5520
-                },
-                "rotation": {
-                  "x": 0,
-                  "y": 0,
-                  "z": 0
-                }
-              },
-              "to": {
-                "position": {
-                  "x": 1480,
-                  "y": 3250,
-                  "z": 300
-                },
-                "rotation": {
-                  "x": 0,
-                  "y": 0,
-                  "z": 0
-                }
-              }
-            },
-            {
-              "class": "KeyframeAction",
-              "target": "t2",
-              "from": {
-                "position": {
-                  "x": 1480,
-                  "y": 3250,
-                  "z": 100
-                },
-                "rotation": {
-                  "x": 0,
-                  "y": 0,
-                  "z": 0
-                },
-                "opacity": 0
-              },
-              "to": {
-                "position": {
-                  "x": 1480,
-                  "y": 3250,
-                  "z": 100
-                },
-                "rotation": {
-                  "x": 0,
-                  "y": 0,
-                  "z": 0
-                },
-                "opacity": 1
-              }
-            },
-            {
-              "class": "KeyframeAction",
-              "target": "gc",
-              "from": {},
-              "to": {
-                "position": {
-                  "x": 4200,
-                  "y": -1800,
-                  "z": 2200
-                },
-                "rotation": {
-                  "x": 0,
-                  "y": 0,
-                  "z": 0
-                },
-                "opacity": 1
-              }
-            }
-          ]
-        },
-        {
-          "id": "k3",
-          "class": "TopicCommand",
-          "actions": [
-            {
-              "class": "KeyframeAction",
-              "target": "camera",
-              "from": {
-                "position": {
-                  "x": 1480,
-                  "y": 3250,
-                  "z": 300
-                },
-                "rotation": {
-                  "x": 0,
-                  "y": 0,
-                  "z": 0
-                }
-              },
-              "to": {
-                "position": {
-                  "x": 4000,
-                  "y": -1490,
-                  "z": 9620
-                },
-                "rotation": {
-                  "x": 0,
-                  "y": 0,
-                  "z": 0
-                }
-              }
-            },
-            {
-              "class": "KeyframeAction",
-              "target": "t2",
-              "from": {
-                "position": {
-                  "x": 1480,
-                  "y": 3250,
-                  "z": 100
-                },
-                "rotation": {
-                  "x": 0,
-                  "y": 0,
-                  "z": 0
-                },
-                "opacity": 1
-              },
-              "to": {
-                "position": {
-                  "x": 1480,
-                  "y": 3250,
-                  "z": 100
-                },
-                "rotation": {
-                  "x": 0,
-                  "y": 0,
-                  "z": 0
-                },
-                "opacity": 0
-              }
-            },
-            {
-              "class": "KeyframeAction",
-              "target": "t3",
-              "from": {},
-              "to": {
-                "position": {
-                  "x": 3299,
-                  "y": -1950,
-                  "z": 2010
-                },
-                "rotation": {
-                  "x": 0,
-                  "y": 0,
-                  "z": 0
-                },
-                "opacity": 0
-              }
-            },
-            {
-              "class": "KeyframeAction",
-              "target": "gc",
-              "from": {
-                "position": {
-                  "x": 4200,
-                  "y": -1800,
-                  "z": 2200
-                },
-                "rotation": {
-                  "x": 0,
-                  "y": 0,
-                  "z": 0
-                },
-                "opacity": 1
-              },
-              "to": {
-                "position": {
-                  "x": 4600,
-                  "y": -1300,
-                  "z": 2200
-                },
-                "rotation": {
-                  "x": 0,
-                  "y": 0,
-                  "z": 0
-                },
-                "opacity": 1
-              }
-            }
-          ]
-        },
-        {
-          "id": "to3",
-          "class": "HelperCommand",
-          "actions": [
-            {
-              "class": "KeyframeAction",
-              "target": "camera",
-              "from": {
-                "position": {
-                  "x": 4000,
-                  "y": -1490,
-                  "z": 9620
-                },
-                "rotation": {
-                  "x": 0,
-                  "y": 0,
-                  "z": 0
-                }
-              },
-              "to": {
-                "position": {
-                  "x": 3299,
-                  "y": -1950,
-                  "z": 2016
-                },
-                "rotation": {
-                  "x": 0,
-                  "y": 0,
-                  "z": 0
-                }
-              }
-            },
-            {
-              "class": "KeyframeAction",
-              "target": "t3",
-              "from": {
-                "position": {
-                  "x": 3299,
-                  "y": -1950,
-                  "z": 2010
-                },
-                "rotation": {
-                  "x": 0,
-                  "y": 0,
-                  "z": 0
-                },
-                "opacity": 0
-              },
-              "to": {
-                "position": {
-                  "x": 3299,
-                  "y": -1950,
-                  "z": 2010
-                },
-                "rotation": {
-                  "x": 0,
-                  "y": 0,
-                  "z": 0
-                },
-                "opacity": 1
-              }
-            },
-            {
-              "class": "KeyframeAction",
-              "target": "gc",
-              "from": {
-                "position": {
-                  "x": 4600,
-                  "y": -1300,
-                  "z": 2200
-                },
-                "rotation": {
-                  "x": 0,
-                  "y": 0,
-                  "z": 0
-                },
-                "opacity": 1
-              },
-              "to": {
-                "position": {
-                  "x": 4200,
-                  "y": -1800,
-                  "z": 2200
-                },
-                "rotation": {
-                  "x": 0,
-                  "y": 0,
-                  "z": 0
-                },
-                "opacity": 1
-              }
-            }
-          ]
-        },
-        {
-          "id": "k4",
-          "class": "TopicCommand",
-          "actions": [
-            {
-              "class": "KeyframeAction",
-              "target": "camera",
-              "from": {
-                "position": {
-                  "x": 3299,
-                  "y": -1950,
-                  "z": 2016
-                },
-                "rotation": {
-                  "x": 0,
-                  "y": 0,
-                  "z": 0
-                }
-              },
-              "to": {
-                "position": {
-                  "x": 4000,
-                  "y": -1490,
-                  "z": 9620
-                },
-                "rotation": {
-                  "x": 0,
-                  "y": 0,
-                  "z": 0
-                }
-              }
-            },
-            {
-              "class": "KeyframeAction",
-              "target": "t4",
-              "from": {},
-              "to": {
-                "position": {
-                  "x": 5560,
-                  "y": -1940,
-                  "z": 2005
-                },
-                "rotation": {
-                  "x": 0,
-                  "y": 0,
-                  "z": 0
-                },
-                "opacity": 0
-              }
-            },
-            {
-              "class": "KeyframeAction",
-              "target": "t3",
-              "from": {
-                "position": {
-                  "x": 3299,
-                  "y": -1950,
-                  "z": 2010
-                },
-                "rotation": {
-                  "x": 0,
-                  "y": 0,
-                  "z": 0
-                },
-                "opacity": 1
-              },
-              "to": {
-                "position": {
-                  "x": 3299,
-                  "y": -1950,
-                  "z": 2010
-                },
-                "rotation": {
-                  "x": 0,
-                  "y": 0,
-                  "z": 0
-                },
-                "opacity": 0
-              }
-            },
-            {
-              "class": "KeyframeAction",
-              "target": "gc",
-              "from": {
-                "position": {
-                  "x": 4200,
-                  "y": -1800,
-                  "z": 2200
-                },
-                "rotation": {
-                  "x": 0,
-                  "y": 0,
-                  "z": 0
-                },
-                "opacity": 1
-              },
-              "to": {
-                "position": {
-                  "x": 4400,
-                  "y": -1000,
-                  "z": 2200
-                },
-                "rotation": {
-                  "x": 0,
-                  "y": 0,
-                  "z": 0
-                },
-                "opacity": 1
-              }
-            }
-          ]
-        },
-        {
-          "id": "to4",
-          "class": "HelperCommand",
-          "actions": [
-            {
-              "class": "KeyframeAction",
-              "target": "camera",
-              "from": {
-                "position": {
-                  "x": 4000,
-                  "y": -1490,
-                  "z": 9620
-                },
-                "rotation": {
-                  "x": 0,
-                  "y": 0,
-                  "z": 0
-                }
-              },
-              "to": {
-                "position": {
-                  "x": 5560,
-                  "y": -1940,
-                  "z": 2010
-                },
-                "rotation": {
-                  "x": 0,
-                  "y": 0,
-                  "z": 0
-                }
-              }
-            },
-            {
-              "class": "KeyframeAction",
-              "target": "t4",
-              "from": {
-                "position": {
-                  "x": 5560,
-                  "y": -1940,
-                  "z": 2005
-                },
-                "rotation": {
-                  "x": 0,
-                  "y": 0,
-                  "z": 0
-                },
-                "opacity": 0
-              },
-              "to": {
-                "position": {
-                  "x": 5560,
-                  "y": -1940,
-                  "z": 2005
-                },
-                "rotation": {
-                  "x": 0,
-                  "y": 0,
-                  "z": 0
-                },
-                "opacity": 1
-              }
-            },
-            {
-              "class": "KeyframeAction",
-              "target": "qc",
-              "from": {},
-              "to": {
-                "position": {
-                  "x": -5100,
-                  "y": -900,
-                  "z": 1700
-                },
-                "rotation": {
-                  "x": 0,
-                  "y": 0,
-                  "z": 0
-                },
-                "opacity": 1
-              }
-            }
-          ]
-        },
-        {
-          "id": "k5",
-          "class": "TopicCommand",
-          "actions": [
-            {
-              "class": "KeyframeAction",
-              "target": "camera",
-              "from": {
-                "position": {
-                  "x": 5560,
-                  "y": -1940,
-                  "z": 2010
+                  "z": 1600
                 },
                 "rotation": {
                   "x": 0,
@@ -1469,8 +455,8 @@
               "to": {
                 "position": {
                   "x": -5000,
-                  "y": -1010,
-                  "z": 8830
+                  "y": 250,
+                  "z": 130
                 },
                 "rotation": {
                   "x": 0,
@@ -1481,13 +467,13 @@
             },
             {
               "class": "KeyframeAction",
-              "target": "t5",
+              "target": " t3",
               "from": {},
               "to": {
                 "position": {
-                  "x": -5200,
-                  "y": -1410,
-                  "z": 1510
+                  "x": -4788,
+                  "y": 125,
+                  "z": 1
                 },
                 "rotation": {
                   "x": 0,
@@ -1499,25 +485,12 @@
             },
             {
               "class": "KeyframeAction",
-              "target": "t4",
+              "target": " t2",
               "from": {
                 "position": {
-                  "x": 5560,
-                  "y": -1940,
-                  "z": 2005
-                },
-                "rotation": {
-                  "x": 0,
-                  "y": 0,
-                  "z": 0
-                },
-                "opacity": 1
-              },
-              "to": {
-                "position": {
-                  "x": 5560,
-                  "y": -1940,
-                  "z": 2005
+                  "x": -5000,
+                  "y": 250,
+                  "z": 1
                 },
                 "rotation": {
                   "x": 0,
@@ -1525,16 +498,12 @@
                   "z": 0
                 },
                 "opacity": 0
-              }
-            },
-            {
-              "class": "KeyframeAction",
-              "target": "qc",
-              "from": {
+              },
+              "to": {
                 "position": {
-                  "x": -5100,
-                  "y": -900,
-                  "z": 1700
+                  "x": -5000,
+                  "y": 250,
+                  "z": 1
                 },
                 "rotation": {
                   "x": 0,
@@ -1542,12 +511,29 @@
                   "z": 0
                 },
                 "opacity": 1
+              }
+            },
+            {
+              "class": "KeyframeAction",
+              "target": "6-2",
+              "from": {
+                "position": {
+                  "x": -5000,
+                  "y": 0,
+                  "z": -1
+                },
+                "rotation": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                },
+                "opacity": 0
               },
               "to": {
                 "position": {
-                  "x": -4100,
-                  "y": -300,
-                  "z": 1700
+                  "x": -4950,
+                  "y": -50,
+                  "z": -1
                 },
                 "rotation": {
                   "x": 0,
@@ -1560,8 +546,8 @@
           ]
         },
         {
-          "id": "to5",
-          "class": "HelperCommand",
+          "id": "zuo2",
+          "class": "TopicCommand",
           "actions": [
             {
               "class": "KeyframeAction",
@@ -1569,8 +555,8 @@
               "from": {
                 "position": {
                   "x": -5000,
-                  "y": -1010,
-                  "z": 8830
+                  "y": 250,
+                  "z": 130
                 },
                 "rotation": {
                   "x": 0,
@@ -1580,9 +566,9 @@
               },
               "to": {
                 "position": {
-                  "x": -5200,
-                  "y": -1410,
-                  "z": 1530
+                  "x": -4788,
+                  "y": 125,
+                  "z": 132
                 },
                 "rotation": {
                   "x": 0,
@@ -1593,12 +579,60 @@
             },
             {
               "class": "KeyframeAction",
-              "target": "t5",
+              "target": " t4",
+              "from": {},
+              "to": {
+                "position": {
+                  "x": -4788,
+                  "y": -125,
+                  "z": 1
+                },
+                "rotation": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                },
+                "opacity": 0
+              }
+            },
+            {
+              "class": "KeyframeAction",
+              "target": " t2",
               "from": {
                 "position": {
-                  "x": -5200,
-                  "y": -1410,
-                  "z": 1510
+                  "x": -5000,
+                  "y": 250,
+                  "z": 1
+                },
+                "rotation": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                },
+                "opacity": 1
+              },
+              "to": {
+                "position": {
+                  "x": -5000,
+                  "y": 250,
+                  "z": 1
+                },
+                "rotation": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                },
+                "opacity": 0
+              }
+            },
+            {
+              "class": "KeyframeAction",
+              "target": " t3",
+              "from": {
+                "position": {
+                  "x": -4788,
+                  "y": 125,
+                  "z": 1
                 },
                 "rotation": {
                   "x": 0,
@@ -1609,39 +643,9 @@
               },
               "to": {
                 "position": {
-                  "x": -5200,
-                  "y": -1410,
-                  "z": 1510
-                },
-                "rotation": {
-                  "x": 0,
-                  "y": 0,
-                  "z": 0
-                },
-                "opacity": 1
-              }
-            },
-            {
-              "class": "KeyframeAction",
-              "target": "qc",
-              "from": {
-                "position": {
-                  "x": -4100,
-                  "y": -300,
-                  "z": 1700
-                },
-                "rotation": {
-                  "x": 0,
-                  "y": 0,
-                  "z": 0
-                },
-                "opacity": 1
-              },
-              "to": {
-                "position": {
-                  "x": -5100,
-                  "y": -900,
-                  "z": 1700
+                  "x": -4788,
+                  "y": 125,
+                  "z": 1
                 },
                 "rotation": {
                   "x": 0,
@@ -1654,7 +658,7 @@
           ]
         },
         {
-          "id": "k6",
+          "id": "zuo3",
           "class": "TopicCommand",
           "actions": [
             {
@@ -1662,9 +666,9 @@
               "target": "camera",
               "from": {
                 "position": {
-                  "x": -5200,
-                  "y": -1410,
-                  "z": 1530
+                  "x": -4788,
+                  "y": 125,
+                  "z": 132
                 },
                 "rotation": {
                   "x": 0,
@@ -1674,9 +678,9 @@
               },
               "to": {
                 "position": {
-                  "x": 0,
-                  "y": 0,
-                  "z": 12930
+                  "x": -4788,
+                  "y": -125,
+                  "z": 132
                 },
                 "rotation": {
                   "x": 0,
@@ -1687,13 +691,155 @@
             },
             {
               "class": "KeyframeAction",
-              "target": "qt",
+              "target": " t5",
               "from": {},
               "to": {
                 "position": {
-                  "x": -5100,
-                  "y": -1300,
-                  "z": 1500
+                  "x": -5000,
+                  "y": -250,
+                  "z": 1
+                },
+                "rotation": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                },
+                "opacity": 0
+              }
+            },
+            {
+              "class": "KeyframeAction",
+              "target": " t3",
+              "from": {
+                "position": {
+                  "x": -4788,
+                  "y": 125,
+                  "z": 1
+                },
+                "rotation": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                },
+                "opacity": 1
+              },
+              "to": {
+                "position": {
+                  "x": -4788,
+                  "y": 125,
+                  "z": 1
+                },
+                "rotation": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                },
+                "opacity": 0
+              }
+            },
+            {
+              "class": "KeyframeAction",
+              "target": " t4",
+              "from": {
+                "position": {
+                  "x": -4788,
+                  "y": -125,
+                  "z": 1
+                },
+                "rotation": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                },
+                "opacity": 0
+              },
+              "to": {
+                "position": {
+                  "x": -4788,
+                  "y": -125,
+                  "z": 1
+                },
+                "rotation": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                },
+                "opacity": 1
+              }
+            }
+          ]
+        },
+        {
+          "id": "zuo4",
+          "class": "TopicCommand",
+          "actions": [
+            {
+              "class": "KeyframeAction",
+              "target": "camera",
+              "from": {
+                "position": {
+                  "x": -4788,
+                  "y": -125,
+                  "z": 132
+                },
+                "rotation": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                }
+              },
+              "to": {
+                "position": {
+                  "x": -5000,
+                  "y": -250,
+                  "z": 130
+                },
+                "rotation": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                }
+              }
+            },
+            {
+              "class": "KeyframeAction",
+              "target": " t6",
+              "from": {},
+              "to": {
+                "position": {
+                  "x": -5212,
+                  "y": -125,
+                  "z": 1
+                },
+                "rotation": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                },
+                "opacity": 0
+              }
+            },
+            {
+              "class": "KeyframeAction",
+              "target": " t5",
+              "from": {
+                "position": {
+                  "x": -5000,
+                  "y": -250,
+                  "z": 1
+                },
+                "rotation": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                },
+                "opacity": 0
+              },
+              "to": {
+                "position": {
+                  "x": -5000,
+                  "y": -250,
+                  "z": 1
                 },
                 "rotation": {
                   "x": 0,
@@ -1705,48 +851,1490 @@
             },
             {
               "class": "KeyframeAction",
-              "target": "gy",
+              "target": " t4",
+              "from": {
+                "position": {
+                  "x": -4788,
+                  "y": -125,
+                  "z": 1
+                },
+                "rotation": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                },
+                "opacity": 1
+              },
+              "to": {
+                "position": {
+                  "x": -4788,
+                  "y": -125,
+                  "z": 1
+                },
+                "rotation": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                },
+                "opacity": 0
+              }
+            }
+          ]
+        },
+        {
+          "id": "zuo5",
+          "class": "TopicCommand",
+          "actions": [
+            {
+              "class": "KeyframeAction",
+              "target": "camera",
+              "from": {
+                "position": {
+                  "x": -5000,
+                  "y": -250,
+                  "z": 130
+                },
+                "rotation": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                }
+              },
+              "to": {
+                "position": {
+                  "x": -5212,
+                  "y": -125,
+                  "z": 132
+                },
+                "rotation": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                }
+              }
+            },
+            {
+              "class": "KeyframeAction",
+              "target": " t8",
               "from": {},
               "to": {
                 "position": {
-                  "x": 4200,
-                  "y": -1700,
+                  "x": -5212,
+                  "y": 125,
+                  "z": 1
+                },
+                "rotation": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                },
+                "opacity": 0
+              }
+            },
+            {
+              "class": "KeyframeAction",
+              "target": " t5",
+              "from": {
+                "position": {
+                  "x": -5000,
+                  "y": -250,
+                  "z": 1
+                },
+                "rotation": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                },
+                "opacity": 1
+              },
+              "to": {
+                "position": {
+                  "x": -5000,
+                  "y": -250,
+                  "z": 1
+                },
+                "rotation": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                },
+                "opacity": 0
+              }
+            },
+            {
+              "class": "KeyframeAction",
+              "target": " t6",
+              "from": {
+                "position": {
+                  "x": -5212,
+                  "y": -125,
+                  "z": 1
+                },
+                "rotation": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                },
+                "opacity": 0
+              },
+              "to": {
+                "position": {
+                  "x": -5212,
+                  "y": -125,
+                  "z": 1
+                },
+                "rotation": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                },
+                "opacity": 1
+              }
+            }
+          ]
+        },
+        {
+          "id": "zuo6",
+          "class": "TopicCommand",
+          "actions": [
+            {
+              "class": "KeyframeAction",
+              "target": "camera",
+              "from": {
+                "position": {
+                  "x": -5212,
+                  "y": -125,
+                  "z": 132
+                },
+                "rotation": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                }
+              },
+              "to": {
+                "position": {
+                  "x": -5212,
+                  "y": 125,
+                  "z": 132
+                },
+                "rotation": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                }
+              }
+            },
+            {
+              "class": "KeyframeAction",
+              "target": " t6",
+              "from": {
+                "position": {
+                  "x": -5212,
+                  "y": -125,
+                  "z": 1
+                },
+                "rotation": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                },
+                "opacity": 1
+              },
+              "to": {
+                "position": {
+                  "x": -5212,
+                  "y": -125,
+                  "z": 1
+                },
+                "rotation": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                },
+                "opacity": 0
+              }
+            },
+            {
+              "class": "KeyframeAction",
+              "target": " t8",
+              "from": {
+                "position": {
+                  "x": -5212,
+                  "y": 125,
+                  "z": 1
+                },
+                "rotation": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                },
+                "opacity": 0
+              },
+              "to": {
+                "position": {
+                  "x": -5212,
+                  "y": 125,
+                  "z": 1
+                },
+                "rotation": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                },
+                "opacity": 1
+              }
+            }
+          ]
+        },
+        {
+          "id": "view2",
+          "class": "HelperCommand",
+          "actions": [
+            {
+              "class": "KeyframeAction",
+              "target": "camera",
+              "from": {
+                "position": {
+                  "x": -5212,
+                  "y": 125,
+                  "z": 132
+                },
+                "rotation": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                }
+              },
+              "to": {
+                "position": {
+                  "x": -5000,
+                  "y": 0,
+                  "z": 1000
+                },
+                "rotation": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                }
+              }
+            },
+            {
+              "class": "KeyframeAction",
+              "target": " t8",
+              "from": {
+                "position": {
+                  "x": -5212,
+                  "y": 125,
+                  "z": 1
+                },
+                "rotation": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                },
+                "opacity": 1
+              },
+              "to": {
+                "position": {
+                  "x": -5212,
+                  "y": 125,
+                  "z": 1
+                },
+                "rotation": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                },
+                "opacity": 0
+              }
+            },
+            {
+              "class": "KeyframeAction",
+              "target": " t9",
+              "from": {},
+              "to": {
+                "position": {
+                  "x": -3000,
+                  "y": 0,
+                  "z": 5
+                },
+                "rotation": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                },
+                "opacity": 0
+              }
+            }
+          ]
+        },
+        {
+          "id": "youviewt1",
+          "class": "TopicCommand",
+          "actions": [
+            {
+              "class": "KeyframeAction",
+              "target": "camera",
+              "from": {
+                "position": {
+                  "x": -5000,
+                  "y": 0,
+                  "z": 1000
+                },
+                "rotation": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                }
+              },
+              "to": {
+                "position": {
+                  "x": -3000,
+                  "y": 0,
+                  "z": 1600
+                },
+                "rotation": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                }
+              }
+            },
+            {
+              "class": "KeyframeAction",
+              "target": " t9",
+              "from": {
+                "position": {
+                  "x": -3000,
+                  "y": 0,
+                  "z": 5
+                },
+                "rotation": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                },
+                "opacity": 0
+              },
+              "to": {
+                "position": {
+                  "x": -3000,
+                  "y": 0,
+                  "z": 5
+                },
+                "rotation": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                },
+                "opacity": 1
+              }
+            },
+            {
+              "class": "KeyframeAction",
+              "target": "7",
+              "from": {},
+              "to": {
+                "position": {
+                  "x": -3000,
+                  "y": 0,
+                  "z": 0
+                },
+                "rotation": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                },
+                "opacity": 0
+              }
+            }
+          ]
+        },
+        {
+          "id": "youview",
+          "class": "HelperCommand",
+          "actions": [
+            {
+              "class": "KeyframeAction",
+              "target": "camera",
+              "from": {
+                "position": {
+                  "x": -3000,
+                  "y": 0,
+                  "z": 1600
+                },
+                "rotation": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                }
+              },
+              "to": {
+                "position": {
+                  "x": -3000,
+                  "y": 0,
+                  "z": 1000
+                },
+                "rotation": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                }
+              }
+            },
+            {
+              "class": "KeyframeAction",
+              "target": "t10",
+              "from": {},
+              "to": {
+                "position": {
+                  "x": -3130,
+                  "y": -286,
+                  "z": 1
+                },
+                "rotation": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 154
+                },
+                "opacity": 0
+              }
+            },
+            {
+              "class": "KeyframeAction",
+              "target": " t9",
+              "from": {
+                "position": {
+                  "x": -3000,
+                  "y": 0,
+                  "z": 5
+                },
+                "rotation": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                },
+                "opacity": 1
+              },
+              "to": {
+                "position": {
+                  "x": -3000,
+                  "y": 0,
+                  "z": 5
+                },
+                "rotation": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                },
+                "opacity": 0
+              }
+            },
+            {
+              "class": "KeyframeAction",
+              "target": "7",
+              "from": {
+                "position": {
+                  "x": -3000,
+                  "y": 0,
+                  "z": 0
+                },
+                "rotation": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                },
+                "opacity": 0
+              },
+              "to": {
+                "position": {
+                  "x": -3000,
+                  "y": 0,
+                  "z": 0
+                },
+                "rotation": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                },
+                "opacity": 1
+              }
+            }
+          ]
+        },
+        {
+          "id": "you1",
+          "class": "TopicCommand",
+          "actions": [
+            {
+              "class": "KeyframeAction",
+              "target": "camera",
+              "from": {
+                "position": {
+                  "x": -3000,
+                  "y": 0,
+                  "z": 1000
+                },
+                "rotation": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                }
+              },
+              "to": {
+                "position": {
+                  "x": -3130,
+                  "y": -286,
+                  "z": 150
+                },
+                "rotation": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 154
+                }
+              }
+            },
+            {
+              "class": "KeyframeAction",
+              "target": "t11",
+              "from": {},
+              "to": {
+                "position": {
+                  "x": -2712,
+                  "y": -78,
+                  "z": 1
+                },
+                "rotation": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 254
+                },
+                "opacity": 0
+              }
+            },
+            {
+              "class": "KeyframeAction",
+              "target": "t10",
+              "from": {
+                "position": {
+                  "x": -3130,
+                  "y": -286,
+                  "z": 1
+                },
+                "rotation": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 154
+                },
+                "opacity": 0
+              },
+              "to": {
+                "position": {
+                  "x": -3130,
+                  "y": -286,
+                  "z": 1
+                },
+                "rotation": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 154
+                },
+                "opacity": 1
+              }
+            }
+          ]
+        },
+        {
+          "id": "you2",
+          "class": "TopicCommand",
+          "actions": [
+            {
+              "class": "KeyframeAction",
+              "target": "camera",
+              "from": {
+                "position": {
+                  "x": -3130,
+                  "y": -286,
+                  "z": 150
+                },
+                "rotation": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 154
+                }
+              },
+              "to": {
+                "position": {
+                  "x": -2712,
+                  "y": -78,
+                  "z": 150
+                },
+                "rotation": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 254
+                }
+              }
+            },
+            {
+              "class": "KeyframeAction",
+              "target": "t12",
+              "from": {},
+              "to": {
+                "position": {
+                  "x": -3227,
+                  "y": 172,
+                  "z": 1
+                },
+                "rotation": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 409
+                },
+                "opacity": 0
+              }
+            },
+            {
+              "class": "KeyframeAction",
+              "target": "t11",
+              "from": {
+                "position": {
+                  "x": -2712,
+                  "y": -78,
+                  "z": 1
+                },
+                "rotation": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 254
+                },
+                "opacity": 0
+              },
+              "to": {
+                "position": {
+                  "x": -2712,
+                  "y": -78,
+                  "z": 1
+                },
+                "rotation": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 254
+                },
+                "opacity": 1
+              }
+            },
+            {
+              "class": "KeyframeAction",
+              "target": "t10",
+              "from": {
+                "position": {
+                  "x": -3130,
+                  "y": -286,
+                  "z": 1
+                },
+                "rotation": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 154
+                },
+                "opacity": 1
+              },
+              "to": {
+                "position": {
+                  "x": -3130,
+                  "y": -286,
+                  "z": 1
+                },
+                "rotation": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 154
+                },
+                "opacity": 0
+              }
+            }
+          ]
+        },
+        {
+          "id": "you3",
+          "class": "TopicCommand",
+          "actions": [
+            {
+              "class": "KeyframeAction",
+              "target": "camera",
+              "from": {
+                "position": {
+                  "x": -2712,
+                  "y": -78,
+                  "z": 150
+                },
+                "rotation": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 254
+                }
+              },
+              "to": {
+                "position": {
+                  "x": -3227,
+                  "y": 172,
+                  "z": 145
+                },
+                "rotation": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 409
+                }
+              }
+            },
+            {
+              "class": "KeyframeAction",
+              "target": "t13",
+              "from": {},
+              "to": {
+                "position": {
+                  "x": -3286,
+                  "y": -74,
+                  "z": 1
+                },
+                "rotation": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 459
+                },
+                "opacity": 0
+              }
+            },
+            {
+              "class": "KeyframeAction",
+              "target": "t12",
+              "from": {
+                "position": {
+                  "x": -3227,
+                  "y": 172,
+                  "z": 1
+                },
+                "rotation": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 409
+                },
+                "opacity": 0
+              },
+              "to": {
+                "position": {
+                  "x": -3227,
+                  "y": 172,
+                  "z": 1
+                },
+                "rotation": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 409
+                },
+                "opacity": 1
+              }
+            },
+            {
+              "class": "KeyframeAction",
+              "target": "t11",
+              "from": {
+                "position": {
+                  "x": -2712,
+                  "y": -78,
+                  "z": 1
+                },
+                "rotation": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 254
+                },
+                "opacity": 1
+              },
+              "to": {
+                "position": {
+                  "x": -2712,
+                  "y": -78,
+                  "z": 1
+                },
+                "rotation": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 254
+                },
+                "opacity": 0
+              }
+            }
+          ]
+        },
+        {
+          "id": "you4",
+          "class": "TopicCommand",
+          "actions": [
+            {
+              "class": "KeyframeAction",
+              "target": "camera",
+              "from": {
+                "position": {
+                  "x": -3227,
+                  "y": 172,
+                  "z": 145
+                },
+                "rotation": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 409
+                }
+              },
+              "to": {
+                "position": {
+                  "x": -3286,
+                  "y": -74,
+                  "z": 145
+                },
+                "rotation": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 459
+                }
+              }
+            },
+            {
+              "class": "KeyframeAction",
+              "target": " t14",
+              "from": {},
+              "to": {
+                "position": {
+                  "x": -2767,
+                  "y": 167,
+                  "z": 1
+                },
+                "rotation": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 306
+                },
+                "opacity": 0
+              }
+            },
+            {
+              "class": "KeyframeAction",
+              "target": "t13",
+              "from": {
+                "position": {
+                  "x": -3286,
+                  "y": -74,
+                  "z": 1
+                },
+                "rotation": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 459
+                },
+                "opacity": 0
+              },
+              "to": {
+                "position": {
+                  "x": -3286,
+                  "y": -74,
+                  "z": 1
+                },
+                "rotation": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 459
+                },
+                "opacity": 1
+              }
+            },
+            {
+              "class": "KeyframeAction",
+              "target": "t12",
+              "from": {
+                "position": {
+                  "x": -3227,
+                  "y": 172,
+                  "z": 1
+                },
+                "rotation": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 409
+                },
+                "opacity": 1
+              },
+              "to": {
+                "position": {
+                  "x": -3227,
+                  "y": 172,
+                  "z": 1
+                },
+                "rotation": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 409
+                },
+                "opacity": 0
+              }
+            }
+          ]
+        },
+        {
+          "id": "you5",
+          "class": "TopicCommand",
+          "actions": [
+            {
+              "class": "KeyframeAction",
+              "target": "camera",
+              "from": {
+                "position": {
+                  "x": -3286,
+                  "y": -74,
+                  "z": 145
+                },
+                "rotation": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 459
+                }
+              },
+              "to": {
+                "position": {
+                  "x": -2767,
+                  "y": 167,
+                  "z": 135
+                },
+                "rotation": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 306
+                }
+              }
+            },
+            {
+              "class": "KeyframeAction",
+              "target": " t15",
+              "from": {},
+              "to": {
+                "position": {
+                  "x": -2998,
+                  "y": 260,
+                  "z": 1
+                },
+                "rotation": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 360
+                },
+                "opacity": 0
+              }
+            },
+            {
+              "class": "KeyframeAction",
+              "target": "t13",
+              "from": {
+                "position": {
+                  "x": -3286,
+                  "y": -74,
+                  "z": 1
+                },
+                "rotation": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 459
+                },
+                "opacity": 1
+              },
+              "to": {
+                "position": {
+                  "x": -3286,
+                  "y": -74,
+                  "z": 1
+                },
+                "rotation": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 459
+                },
+                "opacity": 0
+              }
+            },
+            {
+              "class": "KeyframeAction",
+              "target": " t14",
+              "from": {
+                "position": {
+                  "x": -2767,
+                  "y": 167,
+                  "z": 1
+                },
+                "rotation": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 306
+                },
+                "opacity": 0
+              },
+              "to": {
+                "position": {
+                  "x": -2767,
+                  "y": 167,
+                  "z": 1
+                },
+                "rotation": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 306
+                },
+                "opacity": 1
+              }
+            }
+          ]
+        },
+        {
+          "id": "you6",
+          "class": "TopicCommand",
+          "actions": [
+            {
+              "class": "KeyframeAction",
+              "target": "camera",
+              "from": {
+                "position": {
+                  "x": -2767,
+                  "y": 167,
+                  "z": 135
+                },
+                "rotation": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 306
+                }
+              },
+              "to": {
+                "position": {
+                  "x": -2998,
+                  "y": 260,
+                  "z": 135
+                },
+                "rotation": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 360
+                }
+              }
+            },
+            {
+              "class": "KeyframeAction",
+              "target": " t16",
+              "from": {},
+              "to": {
+                "position": {
+                  "x": -2884,
+                  "y": -254,
+                  "z": 1
+                },
+                "rotation": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 566
+                },
+                "opacity": 0
+              }
+            },
+            {
+              "class": "KeyframeAction",
+              "target": " t14",
+              "from": {
+                "position": {
+                  "x": -2767,
+                  "y": 167,
+                  "z": 1
+                },
+                "rotation": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 306
+                },
+                "opacity": 1
+              },
+              "to": {
+                "position": {
+                  "x": -2767,
+                  "y": 167,
+                  "z": 1
+                },
+                "rotation": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 306
+                },
+                "opacity": 0
+              }
+            },
+            {
+              "class": "KeyframeAction",
+              "target": " t15",
+              "from": {
+                "position": {
+                  "x": -2998,
+                  "y": 260,
+                  "z": 1
+                },
+                "rotation": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 360
+                },
+                "opacity": 0
+              },
+              "to": {
+                "position": {
+                  "x": -2998,
+                  "y": 260,
+                  "z": 1
+                },
+                "rotation": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 360
+                },
+                "opacity": 1
+              }
+            }
+          ]
+        },
+        {
+          "id": "you7",
+          "class": "TopicCommand",
+          "actions": [
+            {
+              "class": "KeyframeAction",
+              "target": "camera",
+              "from": {
+                "position": {
+                  "x": -2998,
+                  "y": 260,
+                  "z": 135
+                },
+                "rotation": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 360
+                }
+              },
+              "to": {
+                "position": {
+                  "x": -2884,
+                  "y": -254,
+                  "z": 135
+                },
+                "rotation": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 566
+                }
+              }
+            },
+            {
+              "class": "KeyframeAction",
+              "target": " t17",
+              "from": {},
+              "to": {
+                "position": {
+                  "x": -3000,
+                  "y": 0,
+                  "z": 5
+                },
+                "rotation": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                },
+                "opacity": 0
+              }
+            },
+            {
+              "class": "KeyframeAction",
+              "target": " t16",
+              "from": {
+                "position": {
+                  "x": -2884,
+                  "y": -254,
+                  "z": 1
+                },
+                "rotation": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 566
+                },
+                "opacity": 0
+              },
+              "to": {
+                "position": {
+                  "x": -2884,
+                  "y": -254,
+                  "z": 1
+                },
+                "rotation": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 566
+                },
+                "opacity": 1
+              }
+            },
+            {
+              "class": "KeyframeAction",
+              "target": " t15",
+              "from": {
+                "position": {
+                  "x": -2998,
+                  "y": 260,
+                  "z": 1
+                },
+                "rotation": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 360
+                },
+                "opacity": 1
+              },
+              "to": {
+                "position": {
+                  "x": -2998,
+                  "y": 260,
+                  "z": 1
+                },
+                "rotation": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 360
+                },
+                "opacity": 0
+              }
+            },
+            {
+              "class": "KeyframeAction",
+              "target": "7",
+              "from": {},
+              "to": {
+                "position": {
+                  "x": -3000,
+                  "y": 0,
+                  "z": 0
+                },
+                "rotation": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                },
+                "opacity": 1
+              }
+            }
+          ]
+        },
+        {
+          "id": "youover",
+          "class": "TopicCommand",
+          "actions": [
+            {
+              "class": "KeyframeAction",
+              "target": "camera",
+              "from": {
+                "position": {
+                  "x": -2884,
+                  "y": -254,
+                  "z": 135
+                },
+                "rotation": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 566
+                }
+              },
+              "to": {
+                "position": {
+                  "x": -3000,
+                  "y": 0,
+                  "z": 1000
+                },
+                "rotation": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                }
+              }
+            },
+            {
+              "class": "KeyframeAction",
+              "target": " t17",
+              "from": {
+                "position": {
+                  "x": -3000,
+                  "y": 0,
+                  "z": 5
+                },
+                "rotation": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                },
+                "opacity": 0
+              },
+              "to": {
+                "position": {
+                  "x": -3000,
+                  "y": 0,
+                  "z": 5
+                },
+                "rotation": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                },
+                "opacity": 1
+              }
+            },
+            {
+              "class": "KeyframeAction",
+              "target": " t16",
+              "from": {
+                "position": {
+                  "x": -2884,
+                  "y": -254,
+                  "z": 1
+                },
+                "rotation": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 566
+                },
+                "opacity": 1
+              },
+              "to": {
+                "position": {
+                  "x": -2884,
+                  "y": -254,
+                  "z": 1
+                },
+                "rotation": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 566
+                },
+                "opacity": 0
+              }
+            },
+            {
+              "class": "KeyframeAction",
+              "target": "6-2",
+              "from": {},
+              "to": {
+                "position": {
+                  "x": -5000,
+                  "y": 0,
+                  "z": -1
+                },
+                "rotation": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                },
+                "opacity": 1
+              }
+            },
+            {
+              "class": "KeyframeAction",
+              "target": "6-1",
+              "from": {},
+              "to": {
+                "position": {
+                  "x": -4950,
+                  "y": -50,
+                  "z": 0
+                },
+                "rotation": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                },
+                "opacity": 1
+              }
+            },
+            {
+              "class": "KeyframeAction",
+              "target": "7",
+              "from": {
+                "position": {
+                  "x": -3000,
+                  "y": 0,
+                  "z": 0
+                },
+                "rotation": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                },
+                "opacity": 1
+              },
+              "to": {
+                "position": {
+                  "x": -3000,
+                  "y": 0,
+                  "z": 0
+                },
+                "rotation": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                },
+                "opacity": 0
+              }
+            }
+          ]
+        },
+        {
+          "id": "jieshu",
+          "class": "HelperCommand",
+          "actions": [
+            {
+              "class": "KeyframeAction",
+              "target": "camera",
+              "from": {
+                "position": {
+                  "x": -3000,
+                  "y": 0,
+                  "z": 1000
+                },
+                "rotation": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                }
+              },
+              "to": {
+                "position": {
+                  "x": -4000,
+                  "y": 0,
                   "z": 2000
                 },
                 "rotation": {
                   "x": 0,
                   "y": 0,
                   "z": 0
-                },
-                "opacity": 1
+                }
               }
             },
             {
               "class": "KeyframeAction",
-              "target": "xq",
-              "from": {},
-              "to": {
-                "position": {
-                  "x": 1500,
-                  "y": 2700,
-                  "z": 50
-                },
-                "rotation": {
-                  "x": 0,
-                  "y": 0,
-                  "z": 0
-                },
-                "opacity": 1
-              }
-            },
-            {
-              "class": "KeyframeAction",
-              "target": "t5",
+              "target": " t17",
               "from": {
                 "position": {
-                  "x": -5200,
-                  "y": -1410,
-                  "z": 1510
+                  "x": -3000,
+                  "y": 0,
+                  "z": 5
                 },
                 "rotation": {
                   "x": 0,
@@ -1757,9 +2345,9 @@
               },
               "to": {
                 "position": {
-                  "x": -5200,
-                  "y": -1410,
-                  "z": 1510
+                  "x": -3000,
+                  "y": 0,
+                  "z": 5
                 },
                 "rotation": {
                   "x": 0,
@@ -1771,48 +2359,48 @@
             },
             {
               "class": "KeyframeAction",
-              "target": "gc",
+              "target": " t18",
               "from": {},
               "to": {
                 "position": {
-                  "x": 4200,
-                  "y": -1800,
-                  "z": 2200
+                  "x": -4000,
+                  "y": 0,
+                  "z": 10
                 },
                 "rotation": {
                   "x": 0,
                   "y": 0,
                   "z": 0
                 },
-                "opacity": 1
+                "opacity": 0
               }
             },
             {
               "class": "KeyframeAction",
-              "target": "xc",
+              "target": "bai",
               "from": {},
               "to": {
                 "position": {
-                  "x": 1500,
-                  "y": 3100,
-                  "z": 70
+                  "x": -4000,
+                  "y": 0,
+                  "z": 10
                 },
                 "rotation": {
                   "x": 0,
                   "y": 0,
                   "z": 0
                 },
-                "opacity": 1
+                "opacity": 0
               }
             },
             {
               "class": "KeyframeAction",
-              "target": "qc",
+              "target": "6-2",
               "from": {
                 "position": {
-                  "x": -5100,
-                  "y": -900,
-                  "z": 1700
+                  "x": -5000,
+                  "y": 0,
+                  "z": -1
                 },
                 "rotation": {
                   "x": 0,
@@ -1823,9 +2411,9 @@
               },
               "to": {
                 "position": {
-                  "x": -5100,
-                  "y": -900,
-                  "z": 1700
+                  "x": -4450,
+                  "y": -50,
+                  "z": -1
                 },
                 "rotation": {
                   "x": 0,
@@ -1837,13 +2425,42 @@
             },
             {
               "class": "KeyframeAction",
-              "target": "we",
-              "from": {},
+              "target": "6-1",
+              "from": {
+                "position": {
+                  "x": -4950,
+                  "y": -50,
+                  "z": 0
+                },
+                "rotation": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                },
+                "opacity": 1
+              },
               "to": {
                 "position": {
+                  "x": -4500,
+                  "y": 0,
+                  "z": 0
+                },
+                "rotation": {
                   "x": 0,
-                  "y": -300,
-                  "z": 100
+                  "y": 0,
+                  "z": 0
+                },
+                "opacity": 1
+              }
+            },
+            {
+              "class": "KeyframeAction",
+              "target": "7",
+              "from": {
+                "position": {
+                  "x": -3000,
+                  "y": 0,
+                  "z": 0
                 },
                 "rotation": {
                   "x": 0,
@@ -1851,12 +2468,25 @@
                   "z": 0
                 },
                 "opacity": 0
+              },
+              "to": {
+                "position": {
+                  "x": -3500,
+                  "y": 0,
+                  "z": 0
+                },
+                "rotation": {
+                  "x": 0,
+                  "y": 0,
+                  "z": 0
+                },
+                "opacity": 1
               }
             }
           ]
         },
         {
-          "id": "k7",
+          "id": "zuihou",
           "class": "TopicCommand",
           "actions": [
             {
@@ -1864,317 +2494,37 @@
               "target": "camera",
               "from": {
                 "position": {
-                  "x": 0,
+                  "x": -4000,
                   "y": 0,
-                  "z": 12930
-                },
-                "rotation": {
-                  "x": 0,
-                  "y": 0,
-                  "z": 0
-                }
-              },
-              "to": {
-                "position": {
-                  "x": 0,
-                  "y": 0,
-                  "z": 12930
-                },
-                "rotation": {
-                  "x": 0,
-                  "y": 0,
-                  "z": 0
-                }
-              }
-            },
-            {
-              "class": "KeyframeAction",
-              "target": "xq",
-              "from": {
-                "position": {
-                  "x": 1500,
-                  "y": 2700,
-                  "z": 50
-                },
-                "rotation": {
-                  "x": 0,
-                  "y": 0,
-                  "z": 0
-                },
-                "opacity": 1
-              },
-              "to": {
-                "position": {
-                  "x": -2500,
-                  "y": 1200,
-                  "z": 50
-                },
-                "rotation": {
-                  "x": 0,
-                  "y": 0,
-                  "z": 0
-                },
-                "opacity": 1
-              }
-            },
-            {
-              "class": "KeyframeAction",
-              "target": "qt",
-              "from": {
-                "position": {
-                  "x": -5100,
-                  "y": -1300,
-                  "z": 1500
-                },
-                "rotation": {
-                  "x": 0,
-                  "y": 0,
-                  "z": 0
-                },
-                "opacity": 1
-              },
-              "to": {
-                "position": {
-                  "x": -4200,
-                  "y": -2300,
-                  "z": 1500
-                },
-                "rotation": {
-                  "x": 0,
-                  "y": 0,
-                  "z": 0
-                },
-                "opacity": 1
-              }
-            },
-            {
-              "class": "KeyframeAction",
-              "target": "gy",
-              "from": {
-                "position": {
-                  "x": 4200,
-                  "y": -1700,
                   "z": 2000
                 },
                 "rotation": {
                   "x": 0,
                   "y": 0,
                   "z": 0
-                },
-                "opacity": 1
+                }
               },
               "to": {
                 "position": {
-                  "x": 5200,
-                  "y": -120,
+                  "x": -4000,
+                  "y": 0,
                   "z": 2000
                 },
                 "rotation": {
                   "x": 0,
                   "y": 0,
                   "z": 0
-                },
-                "opacity": 1
-              }
-            },
-            {
-              "class": "KeyframeAction",
-              "target": "we2",
-              "from": {},
-              "to": {
-                "position": {
-                  "x": 150,
-                  "y": 450,
-                  "z": 150
-                },
-                "rotation": {
-                  "x": 0,
-                  "y": 0,
-                  "z": 0
-                },
-                "opacity": 0
-              }
-            },
-            {
-              "class": "KeyframeAction",
-              "target": "we",
-              "from": {
-                "position": {
-                  "x": 0,
-                  "y": -300,
-                  "z": 100
-                },
-                "rotation": {
-                  "x": 0,
-                  "y": 0,
-                  "z": 0
-                },
-                "opacity": 0
-              },
-              "to": {
-                "position": {
-                  "x": 0,
-                  "y": 0,
-                  "z": 100
-                },
-                "rotation": {
-                  "x": 0,
-                  "y": 0,
-                  "z": 0
-                },
-                "opacity": 1
-              }
-            },
-            {
-              "class": "KeyframeAction",
-              "target": "qc",
-              "from": {
-                "position": {
-                  "x": -5100,
-                  "y": -900,
-                  "z": 1700
-                },
-                "rotation": {
-                  "x": 0,
-                  "y": 0,
-                  "z": 0
-                },
-                "opacity": 1
-              },
-              "to": {
-                "position": {
-                  "x": -4100,
-                  "y": -600,
-                  "z": 1700
-                },
-                "rotation": {
-                  "x": 0,
-                  "y": 0,
-                  "z": 0
-                },
-                "opacity": 1
-              }
-            },
-            {
-              "class": "KeyframeAction",
-              "target": "xc",
-              "from": {
-                "position": {
-                  "x": 1500,
-                  "y": 3100,
-                  "z": 70
-                },
-                "rotation": {
-                  "x": 0,
-                  "y": 0,
-                  "z": 0
-                },
-                "opacity": 1
-              },
-              "to": {
-                "position": {
-                  "x": 1200,
-                  "y": 3400,
-                  "z": 70
-                },
-                "rotation": {
-                  "x": 0,
-                  "y": 0,
-                  "z": 0
-                },
-                "opacity": 1
-              }
-            },
-            {
-              "class": "KeyframeAction",
-              "target": "gc",
-              "from": {
-                "position": {
-                  "x": 4200,
-                  "y": -1800,
-                  "z": 2200
-                },
-                "rotation": {
-                  "x": 0,
-                  "y": 0,
-                  "z": 0
-                },
-                "opacity": 1
-              },
-              "to": {
-                "position": {
-                  "x": 4500,
-                  "y": -1400,
-                  "z": 2200
-                },
-                "rotation": {
-                  "x": 0,
-                  "y": 0,
-                  "z": 0
-                },
-                "opacity": 1
-              }
-            }
-          ]
-        },
-        {
-          "id": "k8",
-          "class": "TopicCommand",
-          "actions": [
-            {
-              "class": "KeyframeAction",
-              "target": "camera",
-              "from": {
-                "position": {
-                  "x": 0,
-                  "y": 0,
-                  "z": 12930
-                },
-                "rotation": {
-                  "x": 0,
-                  "y": 0,
-                  "z": 0
-                }
-              },
-              "to": {
-                "position": {
-                  "x": 150,
-                  "y": 450,
-                  "z": 240
-                },
-                "rotation": {
-                  "x": 0,
-                  "y": 0,
-                  "z": 0
                 }
               }
             },
             {
               "class": "KeyframeAction",
-              "target": "t6",
-              "from": {},
-              "to": {
-                "position": {
-                  "x": 145,
-                  "y": 431,
-                  "z": 151
-                },
-                "rotation": {
-                  "x": 0,
-                  "y": 0,
-                  "z": 0
-                },
-                "opacity": 0
-              }
-            },
-            {
-              "class": "KeyframeAction",
-              "target": "we2",
+              "target": " t18",
               "from": {
                 "position": {
-                  "x": 150,
-                  "y": 450,
-                  "z": 150
+                  "x": -4000,
+                  "y": 0,
+                  "z": 10
                 },
                 "rotation": {
                   "x": 0,
@@ -2185,9 +2535,9 @@
               },
               "to": {
                 "position": {
-                  "x": 150,
-                  "y": 450,
-                  "z": 150
+                  "x": -4000,
+                  "y": 0,
+                  "z": 10
                 },
                 "rotation": {
                   "x": 0,
@@ -2199,136 +2549,12 @@
             },
             {
               "class": "KeyframeAction",
-              "target": "xc",
+              "target": "bai",
               "from": {
                 "position": {
-                  "x": 1200,
-                  "y": 3400,
-                  "z": 70
-                },
-                "rotation": {
-                  "x": 0,
+                  "x": -4000,
                   "y": 0,
-                  "z": 0
-                },
-                "opacity": 1
-              },
-              "to": {
-                "position": {
-                  "x": 1500,
-                  "y": 3100,
-                  "z": 70
-                },
-                "rotation": {
-                  "x": 0,
-                  "y": 0,
-                  "z": 0
-                },
-                "opacity": 1
-              }
-            },
-            {
-              "class": "KeyframeAction",
-              "target": "gc",
-              "from": {
-                "position": {
-                  "x": 4500,
-                  "y": -1400,
-                  "z": 2200
-                },
-                "rotation": {
-                  "x": 0,
-                  "y": 0,
-                  "z": 0
-                },
-                "opacity": 1
-              },
-              "to": {
-                "position": {
-                  "x": 4200,
-                  "y": -1800,
-                  "z": 2200
-                },
-                "rotation": {
-                  "x": 0,
-                  "y": 0,
-                  "z": 0
-                },
-                "opacity": 1
-              }
-            },
-            {
-              "class": "KeyframeAction",
-              "target": "qc",
-              "from": {
-                "position": {
-                  "x": -4100,
-                  "y": -600,
-                  "z": 1700
-                },
-                "rotation": {
-                  "x": 0,
-                  "y": 0,
-                  "z": 0
-                },
-                "opacity": 1
-              },
-              "to": {
-                "position": {
-                  "x": -5100,
-                  "y": -900,
-                  "z": 1700
-                },
-                "rotation": {
-                  "x": 0,
-                  "y": 0,
-                  "z": 0
-                },
-                "opacity": 1
-              }
-            }
-          ]
-        },
-        {
-          "id": "to6",
-          "class": "TopicCommand",
-          "actions": [
-            {
-              "class": "KeyframeAction",
-              "target": "camera",
-              "from": {
-                "position": {
-                  "x": 150,
-                  "y": 450,
-                  "z": 240
-                },
-                "rotation": {
-                  "x": 0,
-                  "y": 0,
-                  "z": 0
-                }
-              },
-              "to": {
-                "position": {
-                  "x": 145,
-                  "y": 431,
-                  "z": 152
-                },
-                "rotation": {
-                  "x": 0,
-                  "y": 0,
-                  "z": 0
-                }
-              }
-            },
-            {
-              "class": "KeyframeAction",
-              "target": "t6",
-              "from": {
-                "position": {
-                  "x": 145,
-                  "y": 431,
-                  "z": 151
+                  "z": 10
                 },
                 "rotation": {
                   "x": 0,
@@ -2339,464 +2565,16 @@
               },
               "to": {
                 "position": {
-                  "x": 145,
-                  "y": 431,
-                  "z": 151
+                  "x": -4000,
+                  "y": 0,
+                  "z": 10
                 },
                 "rotation": {
                   "x": 0,
                   "y": 0,
                   "z": 0
                 },
-                "opacity": 1
-              }
-            },
-            {
-              "class": "KeyframeAction",
-              "target": "we2",
-              "from": {
-                "position": {
-                  "x": 150,
-                  "y": 450,
-                  "z": 150
-                },
-                "rotation": {
-                  "x": 0,
-                  "y": 0,
-                  "z": 0
-                },
-                "opacity": 1
-              },
-              "to": {
-                "position": {
-                  "x": 150,
-                  "y": 450,
-                  "z": 150
-                },
-                "rotation": {
-                  "x": 0,
-                  "y": 0,
-                  "z": 0
-                },
-                "opacity": 1
-              }
-            }
-          ]
-        },
-        {
-          "id": "k9",
-          "class": "TopicCommand",
-          "actions": [
-            {
-              "class": "KeyframeAction",
-              "target": "camera",
-              "from": {
-                "position": {
-                  "x": 145,
-                  "y": 431,
-                  "z": 152
-                },
-                "rotation": {
-                  "x": 0,
-                  "y": 0,
-                  "z": 0
-                }
-              },
-              "to": {
-                "position": {
-                  "x": 0,
-                  "y": 0,
-                  "z": 4930
-                },
-                "rotation": {
-                  "x": 0,
-                  "y": 0,
-                  "z": 0
-                }
-              }
-            },
-            {
-              "class": "KeyframeAction",
-              "target": "t7",
-              "from": {},
-              "to": {
-                "position": {
-                  "x": 0,
-                  "y": -750,
-                  "z": 120
-                },
-                "rotation": {
-                  "x": 0,
-                  "y": 0,
-                  "z": 0
-                },
-                "opacity": 0
-              }
-            },
-            {
-              "class": "KeyframeAction",
-              "target": "t6",
-              "from": {
-                "position": {
-                  "x": 145,
-                  "y": 431,
-                  "z": 151
-                },
-                "rotation": {
-                  "x": 0,
-                  "y": 0,
-                  "z": 0
-                },
-                "opacity": 1
-              },
-              "to": {
-                "position": {
-                  "x": 145,
-                  "y": 431,
-                  "z": 151
-                },
-                "rotation": {
-                  "x": 0,
-                  "y": 0,
-                  "z": 0
-                },
-                "opacity": 0
-              }
-            },
-            {
-              "class": "KeyframeAction",
-              "target": "we2",
-              "from": {
-                "position": {
-                  "x": 150,
-                  "y": 450,
-                  "z": 150
-                },
-                "rotation": {
-                  "x": 0,
-                  "y": 0,
-                  "z": 0
-                },
-                "opacity": 1
-              },
-              "to": {
-                "position": {
-                  "x": 150,
-                  "y": 450,
-                  "z": 150
-                },
-                "rotation": {
-                  "x": 0,
-                  "y": 0,
-                  "z": 0
-                },
-                "opacity": 0
-              }
-            }
-          ]
-        },
-        {
-          "id": "to7",
-          "class": "TopicCommand",
-          "actions": [
-            {
-              "class": "KeyframeAction",
-              "target": "camera",
-              "from": {
-                "position": {
-                  "x": 0,
-                  "y": 0,
-                  "z": 4930
-                },
-                "rotation": {
-                  "x": 0,
-                  "y": 0,
-                  "z": 0
-                }
-              },
-              "to": {
-                "position": {
-                  "x": 0,
-                  "y": -750,
-                  "z": 180
-                },
-                "rotation": {
-                  "x": 0,
-                  "y": 0,
-                  "z": -180
-                }
-              }
-            },
-            {
-              "class": "KeyframeAction",
-              "target": "t7",
-              "from": {
-                "position": {
-                  "x": 0,
-                  "y": -750,
-                  "z": 120
-                },
-                "rotation": {
-                  "x": 0,
-                  "y": 0,
-                  "z": 0
-                },
-                "opacity": 0
-              },
-              "to": {
-                "position": {
-                  "x": 0,
-                  "y": -750,
-                  "z": 120
-                },
-                "rotation": {
-                  "x": 0,
-                  "y": 0,
-                  "z": 0
-                },
-                "opacity": 1
-              }
-            },
-            {
-              "class": "KeyframeAction",
-              "target": "qq",
-              "from": {},
-              "to": {
-                "position": {
-                  "x": 3500,
-                  "y": -4800,
-                  "z": 2500
-                },
-                "rotation": {
-                  "x": 0,
-                  "y": 0,
-                  "z": 0
-                },
-                "opacity": 0
-              }
-            }
-          ]
-        },
-        {
-          "id": "k10",
-          "class": "TopicCommand",
-          "actions": [
-            {
-              "class": "KeyframeAction",
-              "target": "camera",
-              "from": {
-                "position": {
-                  "x": 0,
-                  "y": -750,
-                  "z": 180
-                },
-                "rotation": {
-                  "x": 0,
-                  "y": 0,
-                  "z": -180
-                }
-              },
-              "to": {
-                "position": {
-                  "x": 0,
-                  "y": 0,
-                  "z": 12930
-                },
-                "rotation": {
-                  "x": 0,
-                  "y": 0,
-                  "z": 0
-                }
-              }
-            },
-            {
-              "class": "KeyframeAction",
-              "target": "t8",
-              "from": {},
-              "to": {
-                "position": {
-                  "x": 6590,
-                  "y": -1150,
-                  "z": 2510
-                },
-                "rotation": {
-                  "x": 0,
-                  "y": 0,
-                  "z": 0
-                },
-                "opacity": 0
-              }
-            },
-            {
-              "class": "KeyframeAction",
-              "target": "t7",
-              "from": {
-                "position": {
-                  "x": 0,
-                  "y": -750,
-                  "z": 120
-                },
-                "rotation": {
-                  "x": 0,
-                  "y": 0,
-                  "z": 0
-                },
-                "opacity": 1
-              },
-              "to": {
-                "position": {
-                  "x": 0,
-                  "y": -750,
-                  "z": 120
-                },
-                "rotation": {
-                  "x": 0,
-                  "y": 0,
-                  "z": 0
-                },
-                "opacity": 0
-              }
-            },
-            {
-              "class": "KeyframeAction",
-              "target": "qq",
-              "from": {
-                "position": {
-                  "x": 3500,
-                  "y": -4800,
-                  "z": 2500
-                },
-                "rotation": {
-                  "x": 0,
-                  "y": 0,
-                  "z": 0
-                },
-                "opacity": 0
-              },
-              "to": {
-                "position": {
-                  "x": 5500,
-                  "y": -2800,
-                  "z": 2500
-                },
-                "rotation": {
-                  "x": 0,
-                  "y": 0,
-                  "z": 0
-                },
-                "opacity": 1
-              }
-            }
-          ]
-        },
-        {
-          "id": "to8",
-          "class": "TopicCommand",
-          "actions": [
-            {
-              "class": "KeyframeAction",
-              "target": "camera",
-              "from": {
-                "position": {
-                  "x": 0,
-                  "y": 0,
-                  "z": 12930
-                },
-                "rotation": {
-                  "x": 0,
-                  "y": 0,
-                  "z": 0
-                }
-              },
-              "to": {
-                "position": {
-                  "x": 6590,
-                  "y": -1150,
-                  "z": 2520
-                },
-                "rotation": {
-                  "x": 0,
-                  "y": 0,
-                  "z": 0
-                }
-              }
-            },
-            {
-              "class": "KeyframeAction",
-              "target": "t8",
-              "from": {
-                "position": {
-                  "x": 6590,
-                  "y": -1150,
-                  "z": 2510
-                },
-                "rotation": {
-                  "x": 0,
-                  "y": 0,
-                  "z": 0
-                },
-                "opacity": 0
-              },
-              "to": {
-                "position": {
-                  "x": 6590,
-                  "y": -1150,
-                  "z": 2510
-                },
-                "rotation": {
-                  "x": 0,
-                  "y": 0,
-                  "z": 0
-                },
-                "opacity": 1
-              }
-            },
-            {
-              "class": "KeyframeAction",
-              "target": "qq",
-              "from": {
-                "position": {
-                  "x": 5500,
-                  "y": -2800,
-                  "z": 2500
-                },
-                "rotation": {
-                  "x": 0,
-                  "y": 0,
-                  "z": 0
-                },
-                "opacity": 1
-              },
-              "to": {
-                "position": {
-                  "x": 6500,
-                  "y": -800,
-                  "z": 2500
-                },
-                "rotation": {
-                  "x": 0,
-                  "y": 0,
-                  "z": 0
-                },
-                "opacity": 1
-              }
-            },
-            {
-              "class": "KeyframeAction",
-              "target": "qc",
-              "from": {},
-              "to": {
-                "position": {
-                  "x": -5100,
-                  "y": -900,
-                  "z": 1700
-                },
-                "rotation": {
-                  "x": 0,
-                  "y": 0,
-                  "z": 0
-                },
-                "opacity": 1
+                "opacity": 0.85
               }
             }
           ]

@@ -1,3 +1,10 @@
 language: node_js
+
 node_js:
+  - "5"
   - "5.1"
+
+before_script:
+  - npm install -g babel-cli
+  - npm install -g uglifyjs
+  - npm install -g webpack

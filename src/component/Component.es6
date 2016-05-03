@@ -2,19 +2,22 @@ import THREE            from 'three';
 import UUID             from '../core/utils/UUID';
 
 const DEFAULT_OPTIONS = {
-    id      : UUID.generate(),
-    opacity : 1,
-    position: {
+    id         : UUID.generate(),
+    opacity    : 1,
+    transparent: true,
+    alphaTest  : 0.01,
+    depthTest  : true,
+    position   : {
         x: 0,
         y: 0,
         z: 0
     },
-    rotation: {
+    rotation   : {
         x: 0,
         y: 0,
         z: 0
     },
-    scale   : {
+    scale      : {
         x: 1,
         y: 1,
         z: 1

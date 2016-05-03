@@ -4,12 +4,17 @@ import HelperCommand    from './command/HelperCommand';
 import TopicCommand     from './command/TopicCommand';
 
 /**
+ * Slide controls provide the 'PPT' like operation for the user.
  *
  * @author hermit
- * @version 1.0.0
+ * @version 2.0.0
+ * @since 1.0.0
  */
 export default class SlideControl extends Controls {
 
+    /**
+     * Create a slide control.
+     */
     constructor() {
         super();
 
@@ -19,11 +24,21 @@ export default class SlideControl extends Controls {
         this._commands    = [];
     }
 
+    /**
+     * Load the operations.
+     *
+     * @param data command data.
+     */
     load( data ) {
         this._commandTree = this._buildCommandTree( data );
         this._commands    = this._buildCommandQueue();
     }
 
+    /**
+     * Execute the specified command.
+     *
+     * @param index Command index.
+     */
     execCommand( index ) {
 
         if ( !this._enable ) {
@@ -72,18 +87,29 @@ export default class SlideControl extends Controls {
         this._index = index;
     }
 
+    /**
+     * Execute the previous command.
+     */
     prevCommand() {
         if ( this._index > 0 ) {
             this.execCommand( this._index - 1 );
         }
     }
 
+    /**
+     * Execute the next command.
+     */
     nextCommand() {
         if ( this._index + 1 < this._commands.length ) {
             this.execCommand( this._index + 1 );
         }
     }
 
+    /**
+     * Get the indices of commands which the command is a topic command.
+     *
+     * @returns {Array} An array contains the indices.
+     */
     getTopicCommandIndices() {
         let indices = [];
         this._commandTree.forEach( function ( command, index ) {
@@ -94,6 +120,11 @@ export default class SlideControl extends Controls {
         return indices;
     }
 
+    /**
+     * Ge the indices of commands which the command is a helper command.
+     *
+     * @returns {Array} An array contains the indices.
+     */
     getHelperCommandIndices() {
         let indices = [];
         this._commandTree.forEach( function ( command, index ) {
@@ -102,6 +133,22 @@ export default class SlideControl extends Controls {
             }
         } );
         return indices;
+    }
+
+    /**
+     * Get the max timeout of the command animation.
+     *
+     * @param index command index.
+     * @returns {number}    timeout.
+     */
+    getMaxTimeout( index ) {
+        let max = 0;
+        if ( index < this._commands.length ) {
+            this._commands[ index ].forEach( function ( command ) {
+                max = Math.max( max, command.getMaxTimeout() );
+            }, this );
+        }
+        return max;
     }
 
     _buildCommandTree( data ) {

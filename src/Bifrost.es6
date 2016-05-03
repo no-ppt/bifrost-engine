@@ -51,7 +51,7 @@ function register( name, clazz ) {
  * @type {object}
  */
 let Bifrost = {
-    version     : '2.0.2'
+    version     : '2.0.3'
 };
 
 // Register modules.
