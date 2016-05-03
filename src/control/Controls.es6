@@ -1,7 +1,9 @@
 const DEFAULT_OPTIONS = {};
 
 /**
+ * Controls provide the abilities to update objects in the 3D scene.
  *
+ * @abstract
  * @author hermit
  * @version 2.0.0
  * @since 1.0.0

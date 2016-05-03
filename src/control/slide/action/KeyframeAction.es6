@@ -25,9 +25,11 @@ const DEFAULT_DURATION = 1000;
 const DEFAULT_EASING = 'Sinusoidal.InOut';
 
 /**
+ * Keyframe action.
  *
  * @author hermit
- * @version 1.0.0
+ * @version 2.0.0
+ * @since 1.0.0
  */
 export default class KeyframeAction extends Action {
 
@@ -64,6 +66,15 @@ export default class KeyframeAction extends Action {
      */
     backward( engine ) {
         this._animate( engine, this._from );
+    }
+
+    /**
+     * Get the animation timeout.
+     *
+     * @returns {number} delay + duration.
+     */
+    getTimeout() {
+        return this._delay + this._duration;
     }
 
     _createEasing() {
@@ -180,5 +191,4 @@ export default class KeyframeAction extends Action {
             }
         }
     }
-
 }

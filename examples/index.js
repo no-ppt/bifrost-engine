@@ -4,6 +4,8 @@ requirejs.config( {
     paths  : {
         jquery          : '../node_modules/jquery/dist/jquery',
         bifrost         : './bifrost-engine.min',
+        'three'         : '../node_modules/three/three',
+        'tween'         : '../node_modules/tween.js/src/Tween',
         'babel-polyfill': '../node_modules/babel-polyfill/dist/polyfill'
     },
     shim   : {
