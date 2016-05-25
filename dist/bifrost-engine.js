@@ -48980,7 +48980,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                var svg = this._createSVG();
 
 	                // Create texture.
-	                var texture = new _three2.default.Texture(canvas, _three2.default.UVMapping, _three2.default.ClampToEdgeWrapping, _three2.default.ClampToEdgeWrapping, _three2.default.LinearFilter, _three2.default.LinearFilter, _three2.default.RGBAFormat, _three2.default.UnsignedByteType, 16);
+	                var texture = new _three2.default.Texture(canvas, _three2.default.UVMapping, _three2.default.ClampToEdgeWrapping, _three2.default.ClampToEdgeWrapping, _three2.default.NearestFilter, _three2.default.NearestMipMapLinearFilter, _three2.default.RGBAFormat, _three2.default.UnsignedByteType, 16);
 
 	                // Set texture UV mapping.
 	                texture.repeat.x = 1 / this._options.textureScale.x;
