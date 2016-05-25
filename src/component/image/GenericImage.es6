@@ -73,6 +73,11 @@ export default class GenericImage extends Component {
         // Set opacity.
         material.opacity = this.opacity;
 
+        // Set polygon offset to ensure z-index.
+        material.polygonOffset       = this._options.polygonOffset;
+        material.polygonOffsetFactor = this._options.polygonOffsetFactor;
+        material.polygonOffsetUnits  = this._options.polygonOffsetUnits;
+
         return material;
     }
 
@@ -92,10 +97,6 @@ export default class GenericImage extends Component {
         texture.repeat.y = 1 / this._options.textureScale.y;
         texture.offset.x = -this._options.offset.x;
         texture.offset.y = 1 - texture.repeat.y + this._options.offset.y;
-
-        texture.polygonOffset       = this._options.polygonOffset;
-        texture.polygonOffsetFactor = this._options.polygonOffsetFactor;
-        texture.polygonOffsetUnits  = this._options.polygonOffsetUnits;
 
         // Bind asset event.
         asset.addEventListener( 'StatusChange',

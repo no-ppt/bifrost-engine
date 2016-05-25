@@ -25,6 +25,7 @@ require( [ 'jquery', 'bifrost' ], function ( $, bifrost ) {
     // Create player.
     var container = document.querySelector( '#container' );
     var player    = new Player( container, { ignore: true } );
+    resizeViewport();
     events();
 
     // Load data from json.

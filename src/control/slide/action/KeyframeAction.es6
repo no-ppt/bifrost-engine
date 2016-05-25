@@ -135,14 +135,16 @@ export default class KeyframeAction extends Action {
 
             // Rotation tween.
             if ( object.rotation ) {
-                let rotation = {
-                    x: object.rotation.x != null ?
-                    object.rotation.x * Math.PI / 180 : component.rotation.x,
-                    y: object.rotation.y != null ?
-                    object.rotation.y * Math.PI / 180 : component.rotation.y,
-                    z: object.rotation.z != null ?
-                    object.rotation.z * Math.PI / 180 : component.rotation.z
-                };
+                let rotation = {};
+                if ( object.rotation.x != null ) {
+                    rotation.x = object.rotation.x * Math.PI / 180;
+                }
+                if ( object.rotation.y != null ) {
+                    rotation.y = object.rotation.y * Math.PI / 180;
+                }
+                if ( object.rotation.z != null ) {
+                    rotation.z = object.rotation.z * Math.PI / 180;
+                }
                 tweens.push(
                     new TWEEN.Tween( component.rotation )
                         .to( rotation, this._duration )
