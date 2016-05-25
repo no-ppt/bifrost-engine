@@ -76,7 +76,7 @@ export default class PlaneText extends Component {
 
         // Set opacity.
         material.opacity = this.opacity;
-        
+
         // Set polygon offset to ensure z-index.
         texture.polygonOffset       = this._options.polygonOffset;
         texture.polygonOffsetFactor = this._options.polygonOffsetFactor;
@@ -100,7 +100,7 @@ export default class PlaneText extends Component {
         // Create texture.
         let texture = new THREE.Texture( canvas, THREE.UVMapping,
             THREE.ClampToEdgeWrapping, THREE.ClampToEdgeWrapping,
-            THREE.LinearFilter, THREE.LinearFilter,
+            THREE.NearestFilter, THREE.NearestMipMapLinearFilter,
             THREE.RGBAFormat, THREE.UnsignedByteType, 16 );
 
         // Set texture UV mapping.
