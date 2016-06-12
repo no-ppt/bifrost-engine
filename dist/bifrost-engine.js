@@ -8626,6 +8626,16 @@ return /******/ (function(modules) { // webpackBootstrap
 	            get: function get() {
 	                return this._renderingEngine;
 	            }
+	        }, {
+	            key: 'width',
+	            get: function get() {
+	                return this._renderingEngine.width;
+	            }
+	        }, {
+	            key: 'height',
+	            get: function get() {
+	                return this._renderingEngine.height;
+	            }
 	        }]);
 
 	        return Player;
@@ -11948,6 +11958,16 @@ return /******/ (function(modules) { // webpackBootstrap
 	            key: 'domElement',
 	            get: function get() {
 	                return this._renderer.domElement;
+	            }
+	        }, {
+	            key: 'width',
+	            get: function get() {
+	                return this._container.getBoundingClientRect().width;
+	            }
+	        }, {
+	            key: 'height',
+	            get: function get() {
+	                return this._container.getBoundingClientRect().height;
 	            }
 	        }], [{
 	            key: 'instance',

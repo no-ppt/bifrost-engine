@@ -354,4 +354,12 @@ export default class Player extends EventTarget {
     get renderingEngine() {
         return this._renderingEngine;
     }
+
+    get width() {
+        return this._renderingEngine.width;
+    }
+
+    get height() {
+        return this._renderingEngine.height;
+    }
 }

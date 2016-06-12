@@ -315,4 +315,20 @@ export default class RenderingEngine extends EventTarget {
     get domElement() {
         return this._renderer.domElement;
     }
+
+    /**
+     * Get the width of the renderer container.
+     * @returns {Number}
+     */
+    get width() {
+        return this._container.getBoundingClientRect().width;
+    }
+
+    /**
+     * Get the height of the renderer container.
+     * @returns {Number}
+     */
+    get height() {
+        return this._container.getBoundingClientRect().height;
+    }
 }
