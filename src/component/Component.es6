@@ -7,6 +7,7 @@ const DEFAULT_OPTIONS = {
     transparent: true,
     alphaTest  : 0.01,
     depthTest  : true,
+    side       : THREE.DoubleSide,
     position   : {
         x: 0,
         y: 0,
@@ -31,15 +32,15 @@ const DEFAULT_OPTIONS = {
  */
 export default class Component extends THREE.Object3D {
 
-    constructor( params ) {
+    constructor(params) {
 
         super();
 
         // Merge options.
-        this._options          = Object.assign( {}, DEFAULT_OPTIONS, params );
-        this._options.position = Object.assign( {}, DEFAULT_OPTIONS.position, params.position );
-        this._options.rotation = Object.assign( {}, DEFAULT_OPTIONS.rotation, params.rotation );
-        this._options.scale    = Object.assign( {}, DEFAULT_OPTIONS.scale, params.scale );
+        this._options          = Object.assign({}, DEFAULT_OPTIONS, params);
+        this._options.position = Object.assign({}, DEFAULT_OPTIONS.position, params.position);
+        this._options.rotation = Object.assign({}, DEFAULT_OPTIONS.rotation, params.rotation);
+        this._options.scale    = Object.assign({}, DEFAULT_OPTIONS.scale, params.scale);
 
         // Save the component id. NOTICE: Three.js id field is readonly.
         this.name = this._options.id;
@@ -62,32 +63,32 @@ export default class Component extends THREE.Object3D {
     }
 
     updateOpacity() {
-        if ( this.children ) {
-            this.children.forEach( child => {
-                if ( child instanceof Component ) {
+        if (this.children) {
+            this.children.forEach(child => {
+                if (child instanceof Component) {
                     child.updateOpacity();
                 }
-            } );
+            });
         }
     }
 
-    add( child ) {
-        super.add( child );
+    add(child) {
+        super.add(child);
 
         // Update opacity if instanceof component.
-        if ( child instanceof Component ) {
+        if (child instanceof Component) {
             child.updateOpacity();
         }
     }
 
     get opacity() {
-        if ( this.parent && this.parent instanceof Component ) {
+        if (this.parent && this.parent instanceof Component) {
             return this._opacity * this.parent.opacity;
         }
         return this._opacity;
     }
 
-    set opacity( value ) {
+    set opacity(value) {
         this._opacity = value;
 
         // Update opacity if has children.

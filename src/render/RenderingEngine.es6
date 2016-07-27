@@ -6,7 +6,7 @@ import ComponentFactory from '../component/ComponentFactory';
 import Component        from '../component/Component';
 
 // get logger.
-const logger = LoggerFactory.getLogger( 'RenderingEngine' );
+const logger = LoggerFactory.getLogger('RenderingEngine');
 
 /**
  * Default renderer options.
@@ -104,10 +104,10 @@ export default class RenderingEngine extends EventTarget {
      * Private constructor for create singleton.
      * Use 'RenderingEngine.instance' to get the singleton instance.
      */
-    constructor( enforcer ) {
-        if ( enforcer != singletonEnforcer ) {
+    constructor(enforcer) {
+        if (enforcer != singletonEnforcer) {
             let msg = '[constructor] Cannot instantiate singleton with constructor.';
-            throw new Error( msg );
+            throw new Error(msg);
         }
         super();
 
@@ -124,10 +124,10 @@ export default class RenderingEngine extends EventTarget {
      * @returns { RenderingEngine } the singleton.
      */
     static get instance() {
-        if ( !this[ singleton ] ) {
-            this[ singleton ] = new RenderingEngine( singletonEnforcer );
+        if (!this[singleton]) {
+            this[singleton] = new RenderingEngine(singletonEnforcer);
         }
-        return this[ singleton ];
+        return this[singleton];
     }
 
     /**
@@ -137,22 +137,22 @@ export default class RenderingEngine extends EventTarget {
      * @param container Container to append canvas.
      * @param options   Rendering engine initialize options.
      */
-    initialize( container, options = DEFAULT_OPTIONS ) {
+    initialize(container, options = DEFAULT_OPTIONS) {
 
         // Validate container.
-        if ( !container ) {
+        if (!container) {
             const msg = '[initialize] Please specify the container.';
-            logger.error( msg, container );
-            throw new Error( msg );
+            logger.error(msg, container);
+            throw new Error(msg);
         }
 
         // keep container.
         this._container = container;
 
         // Create renderer, camera and scene.
-        this._createRenderer( options.renderer );
-        this._createCamera( options.camera );
-        this._createScene( options.scene );
+        this._createRenderer(options.renderer);
+        this._createCamera(options.camera);
+        this._createScene(options.scene);
     }
 
     /**
@@ -160,26 +160,26 @@ export default class RenderingEngine extends EventTarget {
      *
      * @param data component data to be added.
      */
-    addComponent( data ) {
+    addComponent(data) {
 
-        if ( data instanceof Array ) {
-            data.forEach( this.addComponent, this );
+        if (data instanceof Array) {
+            data.forEach(this.addComponent, this);
             return;
         }
 
         // Get component object.
-        let component = data instanceof Component ? data : ComponentFactory.create( data );
+        let component = data instanceof Component ? data : ComponentFactory.create(data);
 
         // Add component to map and graphics to the scene.
-        this._components.set( component.name, component );
-        this._scene.add( component );
+        this._components.set(component.name, component);
+        this._scene.add(component);
 
         // Dispatch events.
-        this.dispatchEvent( new Event( {
+        this.dispatchEvent(new Event({
             type     : 'ComponentAdded',
             target   : this,
-            arguments: [ component ]
-        } ) );
+            arguments: [component]
+        }));
     }
 
     /**
@@ -188,21 +188,21 @@ export default class RenderingEngine extends EventTarget {
      * @param id Component id.
      * @returns {object} Camera, scene or component object.
      */
-    get( id ) {
-        if ( id === 'camera' ) {
+    get(id) {
+        if (id === 'camera') {
             return this._camera;
         }
-        if ( id === 'scene' ) {
+        if (id === 'scene') {
             return this._scene;
         }
-        return this._components.get( id );
+        return this._components.get(id);
     }
 
     /**
      * Render the scene with camera.
      */
     render() {
-        this._renderer.render( this._scene, this._camera );
+        this._renderer.render(this._scene, this._camera);
     }
 
 
@@ -212,8 +212,8 @@ export default class RenderingEngine extends EventTarget {
      * @param width
      * @param height
      */
-    resize( width, height ) {
-        this._renderer.setSize( width, height );
+    resize(width, height) {
+        this._renderer.setSize(width, height);
     }
 
     /**
@@ -242,14 +242,14 @@ export default class RenderingEngine extends EventTarget {
         return this.domElement.toDataURL();
     }
 
-    _createRenderer( options ) {
+    _createRenderer(options) {
 
         // Merge renderer options.
-        options = Object.assign( {}, DEFAULT_RENDERER_OPTIONS, options );
+        options = Object.assign({}, DEFAULT_RENDERER_OPTIONS, options);
 
         // Create renderer.
-        if ( !this._renderer ) {
-            this._renderer = new THREE.WebGLRenderer( {
+        if (!this._renderer) {
+            this._renderer = new THREE.WebGLRenderer({
                 precision             : options.precision,
                 alpha                 : options.alpha,
                 premultipliedAlpha    : options.premultipliedAlpha,
@@ -258,28 +258,28 @@ export default class RenderingEngine extends EventTarget {
                 preserveDrawingBuffer : options.preserveDrawingBuffer,
                 depth                 : options.depth,
                 logarithmicDepthBuffer: options.logarithmicDepthBuffer
-            } );
+            });
         }
-        this._renderer.setClearColor( parseInt( options.clearColor ) );
-        this._container.appendChild( this._renderer.domElement );
-        this._renderer.setSize( this._container.offsetWidth, this._container.offsetHeight );
+        this._renderer.setClearColor(parseInt(options.clearColor));
+        this._container.appendChild(this._renderer.domElement);
+        this._renderer.setSize(this._container.offsetWidth, this._container.offsetHeight);
 
         // Dispatch events.
-        this.dispatchEvent( new Event( {
+        this.dispatchEvent(new Event({
             type     : 'RendererCreated',
             target   : this,
-            arguments: [ this._renderer ]
-        } ) );
+            arguments: [this._renderer]
+        }));
     }
 
-    _createCamera( options ) {
+    _createCamera(options) {
 
         // Merge camera options.
-        options = Object.assign( {}, DEFAULT_CAMERA_OPTIONS, options );
+        options = Object.assign({}, DEFAULT_CAMERA_OPTIONS, options);
 
         // Create camera.
         this._camera = new THREE.PerspectiveCamera(
-            options.fov, options.aspect, options.near, options.far );
+            options.fov, options.aspect, options.near, options.far);
 
         this._camera.position.x = options.position.x || 0;
         this._camera.position.y = options.position.y || 0;
@@ -289,27 +289,27 @@ export default class RenderingEngine extends EventTarget {
         this._camera.rotation.z = options.rotation.z * Math.PI / 180 || 0;
 
         // Dispatch events.
-        this.dispatchEvent( new Event( {
+        this.dispatchEvent(new Event({
             type     : 'CameraCreated',
             target   : this,
-            arguments: [ this._camera ]
-        } ) )
+            arguments: [this._camera]
+        }))
     }
 
-    _createScene( options ) {
+    _createScene(options) {
 
         // Merge scene options.
-        options = Object.assign( {}, DEFAULT_SCENE_OPTIONS, options );
+        options = Object.assign({}, DEFAULT_SCENE_OPTIONS, options);
 
         // Create scene.
         this._scene = new THREE.Scene();
 
         // Dispatch events.
-        this.dispatchEvent( new Event( {
+        this.dispatchEvent(new Event({
             type     : 'SceneCreated',
             target   : this,
-            arguments: [ this._scene ]
-        } ) )
+            arguments: [this._scene]
+        }))
     }
 
     get domElement() {
