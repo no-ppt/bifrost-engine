@@ -79,8 +79,8 @@ export default class PlaneText extends Component {
 
         // Set polygon offset to ensure z-index.
         texture.polygonOffset       = this._options.polygonOffset;
-        texture.polygonOffsetFactor = this._options.polygonOffsetFactor;
-        texture.polygonOffsetUnits  = this._options.polygonOffsetUnits;
+        texture.polygonOffsetFactor = -this._options.polygonOffsetFactor;
+        texture.polygonOffsetUnits  = -this._options.polygonOffsetUnits;
 
         return material;
     }

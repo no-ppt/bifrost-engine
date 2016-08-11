@@ -75,8 +75,8 @@ export default class GenericImage extends Component {
 
         // Set polygon offset to ensure z-index.
         material.polygonOffset       = this._options.polygonOffset;
-        material.polygonOffsetFactor = this._options.polygonOffsetFactor;
-        material.polygonOffsetUnits  = this._options.polygonOffsetUnits;
+        material.polygonOffsetFactor = -this._options.polygonOffsetFactor;
+        material.polygonOffsetUnits  = -this._options.polygonOffsetUnits;
 
         return material;
     }
