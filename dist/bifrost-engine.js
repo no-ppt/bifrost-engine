@@ -8186,7 +8186,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	     * @type {object}
 	     */
 	    var Bifrost = {
-	        version: '2.0.6'
+	        version: '2.0.7'
 	    };
 
 	    // Register modules.
@@ -53217,8 +53217,8 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	                // Set polygon offset to ensure z-index.
 	                material.polygonOffset = this._options.polygonOffset;
-	                material.polygonOffsetFactor = this._options.polygonOffsetFactor;
-	                material.polygonOffsetUnits = this._options.polygonOffsetUnits;
+	                material.polygonOffsetFactor = -this._options.polygonOffsetFactor;
+	                material.polygonOffsetUnits = -this._options.polygonOffsetUnits;
 
 	                return material;
 	            }
@@ -53462,8 +53462,8 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	                // Set polygon offset to ensure z-index.
 	                texture.polygonOffset = this._options.polygonOffset;
-	                texture.polygonOffsetFactor = this._options.polygonOffsetFactor;
-	                texture.polygonOffsetUnits = this._options.polygonOffsetUnits;
+	                texture.polygonOffsetFactor = -this._options.polygonOffsetFactor;
+	                texture.polygonOffsetUnits = -this._options.polygonOffsetUnits;
 
 	                return material;
 	            }
