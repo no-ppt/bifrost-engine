@@ -1,4 +1,4 @@
-import THREE            from 'three';
+import * as THREE       from 'three';
 import Component        from '../Component';
 import ContextHelper    from '../../core/utils/ContextHelper';
 
@@ -78,9 +78,11 @@ export default class PlaneText extends Component {
         material.opacity = this.opacity;
 
         // Set polygon offset to ensure z-index.
-        texture.polygonOffset       = this._options.polygonOffset;
-        texture.polygonOffsetFactor = -this._options.polygonOffsetFactor;
-        texture.polygonOffsetUnits  = -this._options.polygonOffsetUnits;
+        material.polygonOffset       = this._options.polygonOffset;
+        material.polygonOffsetFactor = -this._options.polygonOffsetFactor * 100;
+        material.polygonOffsetUnits  = -this._options.polygonOffsetUnits;
+
+        console.log(material);
 
         return material;
     }

@@ -1,4 +1,4 @@
-import THREE            from 'three';
+import * as THREE       from 'three';
 import UUID             from '../core/utils/UUID';
 
 const DEFAULT_OPTIONS = {

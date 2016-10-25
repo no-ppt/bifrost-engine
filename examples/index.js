@@ -1,11 +1,13 @@
 // RequireJS Configuration.
 requirejs.config({
     baseUrl: '../dist',
+    // baseUrl: '../.tmp',                                      // For development
     paths  : {
         jquery          : '../node_modules/jquery/dist/jquery',
         bifrost         : './bifrost-engine.min',
-        'three'         : '../node_modules/three/three',
-        'tween'         : '../node_modules/tween.js/src/Tween',
+        // Bifrost         : './Bifrost',                       // For development
+        'three'         : '../node_modules/three/build/three',
+        'tween'         : '../node_modules/tween/src/Tween',
         'babel-polyfill': '../node_modules/babel-polyfill/dist/polyfill'
     },
     shim   : {
@@ -31,10 +33,34 @@ require(['jquery', 'bifrost'], function ($, bifrost) {
     // Load data from json.
     var name = location.search.substr(1);
     $.get('scene/' + name + '/output.json', function (data) {
+
+        // Adjust camera.
         data.camera.aspect = window.innerWidth / window.innerHeight;
+
+        // Update asset src.
         data.assets.forEach(function (asset) {
             asset.src = 'scene/' + name + '/data/' + asset.src.substr(22);
         });
+
+        // Sort by the polygonOffset
+        function sort(array) {
+
+            // Sort elements.
+            array.sort(function (a, b) {
+                return a.polygonOffsetFactor - b.polygonOffsetFactor;
+            });
+
+            // Recursive children.
+            array.forEach(function (el) {
+                if (el.children && el.children.length > 0) {
+                    sort(el.children);
+                }
+            });
+        }
+
+        sort(data.scene.children);
+
+        // Open document.
         player.open(data);
     });
 
@@ -126,15 +152,18 @@ require(['jquery', 'bifrost'], function ($, bifrost) {
     }
 
     function resizeViewport() {
-        container.style.width  = window.innerWidth;
-        container.style.height = window.innerHeight;
+
+        // Mobile
         // var aspect = 9 / 16;
-        // if (window.innerWidth / window.innerHeight < aspect) {
-        //     container.style.width  = window.innerWidth + 'px';
-        //     container.style.height = (window.innerWidth / aspect) + 'px';
-        // } else {
-        //     container.style.width  = (aspect * window.innerHeight) + 'px';
-        //     container.style.height = window.innerHeight + 'px';
-        // }
+
+        // PC
+        var aspect = 16 / 9;
+        if (window.innerWidth / window.innerHeight < aspect) {
+            container.style.width  = window.innerWidth + 'px';
+            container.style.height = (window.innerWidth / aspect) + 'px';
+        } else {
+            container.style.width  = (aspect * window.innerHeight) + 'px';
+            container.style.height = window.innerHeight + 'px';
+        }
     }
 });

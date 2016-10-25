@@ -1,4 +1,4 @@
-import THREE            from 'three';
+import * as THREE       from 'three';
 import Event            from '../core/events/Event';
 import EventTarget      from '../core/events/EventTarget';
 import LoggerFactory    from '../core/logger/LoggerFactory';

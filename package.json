@@ -1,6 +1,6 @@
 {
   "name": "bifrost-engine",
-  "version": "2.0.7",
+  "version": "2.0.8",
   "description": "Rendering enigne for No-PPT.",
   "main": "dist/bifrost-engine.js",
   "window": {
@@ -43,7 +43,7 @@
   },
   "dependencies": {
     "babel-polyfill": "^6.9.0",
-    "three.js": "^0.73.2",
+    "three": "^0.81.2",
     "tween.js": "^16.3.4"
   }
 }

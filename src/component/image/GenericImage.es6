@@ -1,4 +1,4 @@
-import THREE            from 'three';
+import * as THREE       from 'three';
 import Component        from '../Component';
 import AssetManager     from '../../assets/AssetManager';
 import AssetStatus      from '../../assets/AssetStatus';
