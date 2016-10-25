@@ -11498,6 +11498,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	        src: null
 	    };
 
+	    // Default image.
+	    var DEFAULT_IMAGE = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAYAAADDPmHLAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAABIAAAASABGyWs+AAAACXZwQWcAAACAAAAAgAAw4TGaAAABYUlEQVR42u3bsQkAMQwEQflx/y37y1AwOw2Yg0WZz5v3ZtdZfp/e/y2Pz7ICwBUArgBwBYArAFwB4AoAVwC4AsAVAK4AcAWAKwBcAeAKAFcAuALAFQCuAHAFgCsAXAHgCgBXALgCwBUArgBwBYArAFwB4O70P5/e3wXAFQCuAHAFgCsAXAHgCgBXALgCwBUArgBwBYArAFwB4AoAVwC4AsAVAK4AcAWAKwBcAeAKAFcAuALAFQCuAHAFgCsAXAHgCgB3p//59P4uAK4AcAWAKwBcAeAKAFcAuALAFQCuAHAFgCsAXAHgCgBXALgCwBUArgBwBYArAFwB4AoAVwC4AsAVAK4AcAWAKwBcAeAKAFcAuDv9z6f3dwFwBYArAFwB4AoAVwC4AsAVAK4AcAWAKwBcAeAKAFcAuALAFQCuAHAFgCsAXAHgCgBXALgCwBUArgBwBYArAFwB4AoAVwC4AsD9DYQLBFEjzLgAAAAldEVYdGRhdGU6Y3JlYXRlADIwMTYtMTAtMjVUMTE6NDE6NDkrMDg6MDAIbjBRAAAAJXRFWHRkYXRlOm1vZGlmeQAyMDE2LTEwLTI1VDExOjQxOjQ5KzA4OjAweTOI7QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAAASUVORK5CYII=';
+
 	    /**
 	     *
 	     * @author hermit
@@ -11544,6 +11547,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	        }, {
 	            key: '_imageErrorHandler',
 	            value: function _imageErrorHandler() {
+	                this._image.src = window.BIFROST_DEFAULT_IMAGE_ASSET || DEFAULT_IMAGE;
 	                this.status = _AssetStatus2.default.FAILURE;
 	            }
 	        }, {
