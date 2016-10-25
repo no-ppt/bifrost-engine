@@ -1,11 +1,11 @@
 // RequireJS Configuration.
 requirejs.config({
-    baseUrl: '../dist',
-    // baseUrl: '../.tmp',                                      // For development
+    // baseUrl: '../dist',
+    baseUrl: '../.tmp',                                      // For development
     paths  : {
         jquery          : '../node_modules/jquery/dist/jquery',
-        bifrost         : './bifrost-engine.min',
-        // Bifrost         : './Bifrost',                       // For development
+        // bifrost         : './bifrost-engine.min',
+        bifrost         : './Bifrost',                       // For development
         'three'         : '../node_modules/three/build/three',
         'tween'         : '../node_modules/tween/src/Tween',
         'babel-polyfill': '../node_modules/babel-polyfill/dist/polyfill'
@@ -23,6 +23,8 @@ require(['jquery', 'bifrost'], function ($, bifrost) {
     var Player         = Bifrost.player.Player;
     var TweenConfig    = Bifrost.config.TweenConfig;
     TweenConfig.enable = true;
+
+    // window.BIFROST_DEFAULT_IMAGE_ASSET = 'scene/data/default.jpg';
 
     // Create player.
     var container = document.querySelector('#container');
