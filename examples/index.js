@@ -1,11 +1,11 @@
 // RequireJS Configuration.
 requirejs.config({
-    // baseUrl: '../dist',
-    baseUrl: '../.tmp',                                      // For development
+    baseUrl: '../dist',
+    // baseUrl: '../.tmp',                                      // For development
     paths  : {
         jquery          : '../node_modules/jquery/dist/jquery',
-        // bifrost         : './bifrost-engine.min',
-        bifrost         : './Bifrost',                       // For development
+        bifrost         : './bifrost-engine.min',
+        // bifrost         : './Bifrost',                       // For development
         'three'         : '../node_modules/three/build/three',
         'tween'         : '../node_modules/tween/src/Tween',
         'babel-polyfill': '../node_modules/babel-polyfill/dist/polyfill'
@@ -24,7 +24,7 @@ require(['jquery', 'bifrost'], function ($, bifrost) {
     var TweenConfig    = Bifrost.config.TweenConfig;
     TweenConfig.enable = true;
 
-    // window.BIFROST_DEFAULT_IMAGE_ASSET = 'scene/data/default.jpg';
+    window.BIFROST_DEFAULT_IMAGE_ASSET = 'scene/data/default.jpg';
 
     // Create player.
     var container = document.querySelector('#container');
@@ -35,9 +35,6 @@ require(['jquery', 'bifrost'], function ($, bifrost) {
     // Load data from json.
     var name = location.search.substr(1);
     $.get('scene/' + name + '/output.json', function (data) {
-
-        // Adjust camera.
-        data.camera.aspect = window.innerWidth / window.innerHeight;
 
         // Update asset src.
         data.assets.forEach(function (asset) {

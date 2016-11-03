@@ -8270,7 +8270,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	     * @type {object}
 	     */
 	    var Bifrost = {
-	        version: '2.0.7'
+	        version: '2.0.8'
 	    };
 
 	    // Register modules.
@@ -11501,6 +11501,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	    // Default image.
 	    var DEFAULT_IMAGE = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAYAAADDPmHLAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAABIAAAASABGyWs+AAAACXZwQWcAAACAAAAAgAAw4TGaAAABYUlEQVR42u3bsQkAMQwEQflx/y37y1AwOw2Yg0WZz5v3ZtdZfp/e/y2Pz7ICwBUArgBwBYArAFwB4AoAVwC4AsAVAK4AcAWAKwBcAeAKAFcAuALAFQCuAHAFgCsAXAHgCgBXALgCwBUArgBwBYArAFwB4O70P5/e3wXAFQCuAHAFgCsAXAHgCgBXALgCwBUArgBwBYArAFwB4AoAVwC4AsAVAK4AcAWAKwBcAeAKAFcAuALAFQCuAHAFgCsAXAHgCgB3p//59P4uAK4AcAWAKwBcAeAKAFcAuALAFQCuAHAFgCsAXAHgCgBXALgCwBUArgBwBYArAFwB4AoAVwC4AsAVAK4AcAWAKwBcAeAKAFcAuDv9z6f3dwFwBYArAFwB4AoAVwC4AsAVAK4AcAWAKwBcAeAKAFcAuALAFQCuAHAFgCsAXAHgCgBXALgCwBUArgBwBYArAFwB4AoAVwC4AsD9DYQLBFEjzLgAAAAldEVYdGRhdGU6Y3JlYXRlADIwMTYtMTAtMjVUMTE6NDE6NDkrMDg6MDAIbjBRAAAAJXRFWHRkYXRlOm1vZGlmeQAyMDE2LTEwLTI1VDExOjQxOjQ5KzA4OjAweTOI7QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAAASUVORK5CYII=';
 
+	    var isError = false;
+
 	    /**
 	     *
 	     * @author hermit
@@ -11547,7 +11549,18 @@ return /******/ (function(modules) { // webpackBootstrap
 	        }, {
 	            key: '_imageErrorHandler',
 	            value: function _imageErrorHandler() {
-	                this._image.src = window.BIFROST_DEFAULT_IMAGE_ASSET || DEFAULT_IMAGE;
+
+	                if (!isError) {
+
+	                    // Using customize default image in the first time.
+	                    isError = true;
+	                    this._image.src = window.BIFROST_DEFAULT_IMAGE_ASSET || DEFAULT_IMAGE;
+	                } else {
+
+	                    // Using default image when customize default image cannot visited.
+	                    this._image.src = DEFAULT_IMAGE;
+	                }
+
 	                this.status = _AssetStatus2.default.FAILURE;
 	            }
 	        }, {
@@ -55920,6 +55933,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	                        tweens.push(new _tween2.default.Tween(component.rotation).to(rotation, this._duration).easing(object.easing).delay(this._delay));
 	                    }
 
+	                    // Scale tween.
+	                    if (object.scale) {
+	                        tweens.push(new _tween2.default.Tween(component.scale).to(object.scale, this._duration).easing(object.easing).delay(this._delay));
+	                    }
+
 	                    // Opacity tween.
 	                    if (object.opacity != null) {
 	                        tweens.push(new _tween2.default.Tween({ opacity: component._opacity }).to({ opacity: object.opacity }, this._duration).onUpdate(function () {
@@ -55943,6 +55961,12 @@ return /******/ (function(modules) { // webpackBootstrap
 	                        component.rotation.x = object.rotation.x != null ? object.rotation.x * Math.PI / 180 : component.rotation.x;
 	                        component.rotation.y = object.rotation.y != null ? object.rotation.y * Math.PI / 180 : component.rotation.y;
 	                        component.rotation.z = object.rotation.z != null ? object.rotation.z * Math.PI / 180 : component.rotation.z;
+	                    }
+
+	                    if (object.scale) {
+	                        component.scale.x = object.scale.x != null ? object.scale.x : component.scale.x;
+	                        component.scale.y = object.scale.y != null ? object.scale.y : component.scale.y;
+	                        component.scale.z = object.scale.z != null ? object.scale.z : component.scale.z;
 	                    }
 
 	                    if (object.opacity != null) {

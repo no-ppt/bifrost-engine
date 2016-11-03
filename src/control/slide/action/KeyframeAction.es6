@@ -153,6 +153,16 @@ export default class KeyframeAction extends Action {
                 );
             }
 
+            // Scale tween.
+            if ( object.scale ) {
+                tweens.push(
+                    new TWEEN.Tween( component.scale )
+                        .to( object.scale, this._duration )
+                        .easing( object.easing )
+                        .delay( this._delay )
+                );
+            }
+
             // Opacity tween.
             if ( object.opacity != null ) {
                 tweens.push(
@@ -186,6 +196,15 @@ export default class KeyframeAction extends Action {
                 object.rotation.y * Math.PI / 180 : component.rotation.y;
                 component.rotation.z = object.rotation.z != null ?
                 object.rotation.z * Math.PI / 180 : component.rotation.z;
+            }
+
+            if ( object.scale ) {
+                component.scale.x = object.scale.x != null ?
+                    object.scale.x : component.scale.x;
+                component.scale.y = object.scale.y != null ?
+                    object.scale.y : component.scale.y;
+                component.scale.z = object.scale.z != null ?
+                    object.scale.z : component.scale.z;
             }
 
             if ( object.opacity != null ) {
